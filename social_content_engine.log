@@ -1,0 +1,1000 @@
+2024-08-30 21:39:05,342 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:41:31,665 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:41:31,666 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:41:31,666 - social_content_engine.document_processing.pdf_processor - ERROR - Error extracting text from PDF: PdfFileReader is deprecated and was removed in PyPDF2 3.0.0. Use PdfReader instead.
+2024-08-30 21:43:08,779 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:43:08,780 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:43:08,783 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:43:08,784 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:43:08,786 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:43:08,786 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-30 21:44:35,843 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:44:35,844 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:44:35,848 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:44:35,849 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:44:35,851 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:44:35,851 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-30 21:44:50,016 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:44:50,016 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:44:50,019 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:44:50,019 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:44:50,022 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:44:50,022 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-30 21:53:52,085 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:53:52,085 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-30 21:53:52,085 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:53:52,089 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:53:52,090 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-30 21:53:52,092 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-30 21:53:52,092 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:28:21,327 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:28:21,327 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:28:21,328 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:28:21,333 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:28:21,334 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:28:21,339 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:28:21,339 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:32:41,156 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:32:41,156 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:32:41,157 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:32:41,161 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:32:41,162 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:32:41,165 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:32:41,165 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:34:11,910 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:34:11,910 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:34:11,910 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:34:11,918 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:34:11,919 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:34:11,922 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:34:11,923 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:39:47,155 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:39:47,155 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:39:47,155 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:39:47,159 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:39:47,159 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:39:47,161 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:39:47,161 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Using the following information, generate a social media post like a narration:
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:40:12,683 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:40:12,684 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:40:12,684 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:40:12,689 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:40:12,690 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:40:12,694 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:40:12,694 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Using the following information, generate a social media post like a narration:
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:40:24,461 - social_content_engine.content_generation.ai_content_generator - ERROR - Unexpected error during content generation: 'ChatCompletionMessage' object is not subscriptable
+2024-08-31 07:41:37,894 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:41:37,894 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:41:37,894 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:41:37,897 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:41:37,898 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:41:37,900 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:41:37,900 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Using the following information, generate a social media post like a narration:
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:41:48,021 - social_content_engine.content_generation.ai_content_generator - ERROR - Unexpected error during content generation: 'ChatCompletionMessage' object is not subscriptable
+2024-08-31 07:42:48,297 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:42:48,297 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:42:48,297 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:42:48,301 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:42:48,301 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:42:48,304 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:42:48,304 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Using the following information, generate a social media post like a narration:
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:42:58,250 - social_content_engine.content_generation.ai_content_generator - ERROR - Unexpected error during content generation: 'ChatCompletionMessage' object is not subscriptable
+2024-08-31 07:43:31,847 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:43:31,848 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:43:31,848 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:43:31,851 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:43:31,851 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:43:31,854 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:43:31,854 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Using the following information, generate a social media post like a narration:
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:43:43,267 - social_content_engine.content_generation.ai_content_generator - ERROR - Unexpected error during content generation: 'ChatCompletionMessage' object is not subscriptable
+2024-08-31 07:45:42,599 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:45:42,599 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 07:45:42,599 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:45:42,603 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:45:42,603 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:45:42,606 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:45:42,606 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Using the following information, generate a social media post like a narration:
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:45:50,630 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 07:45:50,631 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 07:45:50,634 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 07:45:50,634 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 07:45:58,621 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 07:45:58,622 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 07:45:58,622 - social_content_engine.audio_conversion.text_to_speech - ERROR - Error converting text to speech: [Errno 2] No such file or directory: '/opt/anaconda3/lib/python3.8/site-packages/social_content_engine/config/data/output.mp3'
+2024-08-31 08:17:24,525 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:17:24,533 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:17:24,539 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:17:24,547 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:19:08,393 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:19:08,398 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:19:08,398 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:19:08,401 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:19:27,578 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:19:27,582 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:19:27,582 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:19:27,587 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:21:49,158 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:21:49,162 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:21:49,163 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:21:49,166 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:25:16,167 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 08:27:50,723 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 08:29:14,883 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 08:29:14,884 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 08:29:14,884 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:29:14,888 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:29:14,889 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:29:14,892 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:29:14,892 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Generate social media content based on the following text: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 08:29:28,443 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 08:29:28,444 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:29:28,447 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:29:28,447 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 08:29:40,771 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 08:29:40,772 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 08:29:53,066 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 08:29:53,066 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:29:53,069 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:29:53,069 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 08:30:00,301 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 08:30:00,301 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 08:30:06,855 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 08:30:06,855 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: I understand your requirements. Here's a brief summary:
+
+1. Document Processing: The Social Content Engine should be able to correctly extract and process the text from this document for further use.
+
+2. Content Generation: The processed text will then be utilized to generate content for social media platforms using AI models, such as OpenAI's GPT.
+
+3. Audio Conversion: The generated content should be capable of being converted into an audio file.
+
+4. Video Creation: The content and audio will be overlaid onto a background video to generate a final social media post.
+
+5. Call-to-Action Integration: A call-to-action will be integrated at the end of the video.
+
+This document will be used as a test input to ensure that all modules of the Social Content Engine are functioning as expected., Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 08:30:07,117 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 62.47 seconds, Video duration: 194.86 seconds
+2024-08-31 08:30:07,131 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 08:30:17,756 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 08:30:17,763 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:30:17,780 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:30:17,780 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 08:30:24,776 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 08:30:24,777 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 08:30:31,256 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 08:30:31,256 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: Understood. To summarize, this document will be used to test the following functionalities of the Social Content Engine:
+
+1. Document Processing: The engine should accurately extract and process the text from this document for content generation.
+   
+2. Content Generation: The extracted content will be utilized to generate social media content. This will be done using AI models like OpenAI's GPT.
+   
+3. Audio Conversion: The generated content will be converted into an audio file.
+   
+4. Video Creation: The content and audio will be combined with a background video to create a final video for social media publication.
+   
+5. Call-to-Action Integration: A call-to-action will be integrated at the end of the video.
+
+This document is meant to ensure that each feature of the Social Content Engine functions as expected when used as a test input., Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 08:30:31,474 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 65.04 seconds, Video duration: 194.86 seconds
+2024-08-31 08:30:31,475 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 08:30:41,179 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 08:30:41,179 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2024-08-31 08:30:45,113 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta.mp4.
+2024-08-31 08:36:20,931 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 08:36:20,931 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 08:36:20,935 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 08:36:20,935 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Generate engaging social media content based on the following extracted text: 
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 08:36:31,063 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 08:36:31,064 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 08:36:41,228 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 08:36:41,229 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: 📌 Social Media Post 1:
+"Hey there, social media enthusiasts! 👋 We're testing our new Social Content Engine designed to take social media content 📝 creation to the next level. Let's explore this innovative tool together. Stay tuned! #AI #ContentCreation #SocialMedia"
+
+🎥 Social Media Post 2 (Video):
+[Background video showing the Social Content Engine interface, with overlaid generated content and audio]
+"Welcome to the future of content creation 🚀! With our Social Content Engine, we automate the process from extracting text to generating engaging social media posts. Check out the video to see how it works! #AI #Automation #SocialMedia"
+
+📣 Social Media Post 3 (Call-to-Action):
+"Ready to revolutionize your social media content? 🌐 Try the Social Content Engine today and see the difference! Click the link in our bio to learn more. Let's create together. #CallToAction #JoinUs #SocialContentEngine"
+
+🎧 Social Media Post 4 (Audio):
+[Clip of generated content in audio format]
+"Listen to the future of content creation! Our Social Content Engine turns text into engaging audio content. Tune in to hear the difference. #AudioContent #AI #SocialMedia", Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 08:36:41,466 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 100.49000000000001 seconds, Video duration: 194.86 seconds
+2024-08-31 08:36:41,467 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 08:36:55,611 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 08:36:55,612 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2024-08-31 08:37:02,154 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:16:36,079 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 14:16:36,080 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 14:16:36,083 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 14:16:36,084 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Generate engaging social media script based on the following extracted text give me only the script and nothing else: 
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 14:16:43,601 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 14:16:43,601 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 14:16:51,406 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 14:16:51,407 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: "🚀We're testing our new Social Content Engine! This innovative tool is designed to automate content creation for your favorite social media platforms. 📊
+
+1️⃣ Document Processing: We're making sure our engine can extract and process text for content generation. 📝
+
+2️⃣ Content Generation: Using AI models like OpenAI's GPT, we're transforming extracted text into engaging social media content! 🤖
+
+3️⃣ Audio Conversion: We're not stopping at text - our generated content will also be available as an audio file! 🎧
+
+4️⃣ Video Creation: Picture this - the content and audio overlaid onto a background video to create a final social media post. 🎬
+
+5️⃣ Call-to-Action Integration: And the cherry on top? A call-to-action at the end of the video. 🎯
+
+Join us in testing our Social Content Engine and make sure each module functions as expected. Stay tuned! #SocialContentEngine #AI #ContentGeneration", Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 14:16:51,767 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 76.99 seconds, Video duration: 194.86 seconds
+2024-08-31 14:16:51,768 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 14:17:05,379 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:17:05,379 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2024-08-31 14:17:09,970 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:19:14,981 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 14:19:14,981 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 14:19:14,985 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 14:19:14,985 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Generate engaging social media script based on the following extracted text give me only the script and nothing else: 
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 14:19:22,137 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 14:19:22,137 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 14:19:31,053 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 14:19:31,053 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: "🚀We're putting our Social Content Engine to the test! Designed to automate content creation for social media platforms, it's time to see how it performs. 
+
+📝First up: Document Processing. We're using this text to see how accurately it's extracted and processed for content generation. 
+
+💡Next: Content Generation. Our AI models like OpenAI's GPT are being put to work to transform the extracted text into engaging social media content. 
+
+🔊Then: Audio Conversion. Watch this space as our generated content comes alive in audio format. 
+
+🎥Following: Video Creation. Imagine the content and audio overlaid onto a background video to create a final social media post. Exciting, isn't it? 
+
+🎯Lastly: Call-to-Action Integration. A powerful call-to-action will be added at the end of the video. 
+
+Join us on this journey as we test the capabilities of the Social Content Engine. Your feedback is invaluable! #SocialContentEngine #ContentCreation #AI", Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 14:19:31,327 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 76.42 seconds, Video duration: 194.86 seconds
+2024-08-31 14:19:31,327 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 14:19:43,104 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:19:43,104 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2024-08-31 14:19:48,041 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:21:59,001 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 14:21:59,001 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 14:21:59,005 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 14:21:59,005 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Convert the text extracted from the pdf into a narration so that it can used for video overlaying 
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 14:22:10,452 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 14:22:10,452 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 14:22:24,725 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 14:22:24,725 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: [Soft music starts playing]
+
+"In our quest to revolutionize social media content production, we present to you - the Social Content Engine. This engine, now under testing, is designed to automate content creation across various social media platforms. The objective of this documentation is to serve as a test input for the Social Content Engine, examining its functionality, from PDF processing, content generation, and audio conversion, to video creation and call-to-action integration. 
+
+Starting with Document Processing, the engine is expected to accurately extract the text from this document and process it, paving the way for further content generation. 
+
+Moving on to the second module, Content Generation, the extracted text will serve as the foundation. This text will be transformed into engaging social media content, utilizing cutting-edge AI models like OpenAI's GPT.
+
+The third module, Audio Conversion, ensures the generated content isn't just visually appealing but audibly engaging too. The content is converted into an audio file, making it more accessible to a wider audience.
+
+Our fourth module, Video Creation, takes the content and audio, overlaying them onto a background video. The result is a final social media post that is visually rich, audibly engaging, and ready to capture attention.
+
+Finally, to encourage viewer interaction we have the Call-to-Action Integration. A call-to-action is meticulously added at the end of the video, urging viewers to engage. 
+
+It is our hope that this document will aid in the comprehensive testing of the Social Content Engine, ensuring each module functions as expected and contributes to a seamless social media content creation experience. 
+
+Thank you for joining us on this journey to redefine social media content creation."
+
+[Soft music fades out], Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 14:22:25,035 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 134.33 seconds, Video duration: 194.86 seconds
+2024-08-31 14:22:25,035 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 14:22:43,721 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:22:43,722 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2024-08-31 14:22:51,908 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:26:32,910 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 14:26:32,910 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 14:26:32,915 - social_content_engine.document_processing.pdf_processor - INFO - Successfully extracted text from PDF: data/Default_Document.pdf
+2024-08-31 14:26:32,915 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: Convert the text extracted from the pdf into a narration so that it can used for video overlaying 
+
+Social Content Engine - Test Document
+Purpose: Testing the Social Content Engine
+This document has been created to test the functionality of the Social Content Engine. The engine is
+designed 
+to automate content creation for various social media platforms. This document will serve as input to
+test 
+the PDF processing, content generation, audio conversion, video creation, and call-to-action
+integration features.
+1. Document Processing: 
+   - The engine should correctly extract this text and process it for further content generation.
+2. Content Generation: 
+   - The extracted text will be used to generate social media content using AI models like OpenAI's
+GPT.
+3. Audio Conversion: 
+   - The generated content should be converted into an audio file.
+4. Video Creation: 
+   - The content and audio will be overlaid onto a background video to create a final social media
+post.
+5. Call-to-Action Integration: 
+   - A call-to-action will be added at the end of the video.Please use this document as a test input for the Social Content Engine to ensure that each module
+functions as expected.
+2024-08-31 14:26:43,617 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 14:26:43,617 - social_content_engine.audio_conversion.text_to_speech - INFO - Starting text-to-speech conversion.
+2024-08-31 14:26:55,257 - social_content_engine.audio_conversion.text_to_speech - INFO - Successfully saved audio to /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3.
+2024-08-31 14:26:55,258 - social_content_engine.video_creation.video_overlay - INFO - Starting video creation. Content: [Narration begins]
+
+Welcome to the exploration of our innovative solution, the Social Content Engine. This narration is based on a test document, specifically created to examine the functionality of our engine. Our aim is to revolutionize content creation for a wide variety of social media platforms, and this document will serve as a crucial cog in the machinery.
+
+Our first step is Document Processing. The engine is programmed to correctly extract and process the text from this document, setting the stage for the subsequent content generation.
+
+Moving on to the second step, Content Generation. The text we meticulously extracted will be used to generate engaging social media content. To achieve this, we employ state-of-the-art AI models, such as OpenAI's GPT.
+
+The third step in our process is Audio Conversion. This is where the magic happens. The newly generated content will be transformed into an audio file, ready to be heard by the world.
+
+The fourth step is Video Creation. The ready-to-use content and audio will be overlaid onto a background video. This process results in a captivating final social media post, designed to grab attention and deliver the message effectively.
+
+Finally, we integrate a Call-to-Action. This crucial element will be added at the end of the video, providing a clear direction for the audience to engage further with the content.
+
+This document serves as a test input for the Social Content Engine, allowing us to ensure that each module functions as expected. This is not just a test, but a milestone in our journey towards an automated and efficient future of content creation. 
+
+[Narration ends], Audio File: /Users/sriram.ranganathan99/dumb/tiktokce/data/output_audio.mp3, Video File: data/Default_Video.mp4
+2024-08-31 14:26:55,593 - social_content_engine.video_creation.video_overlay - INFO - Audio duration: 119.21000000000001 seconds, Video duration: 194.86 seconds
+2024-08-31 14:26:55,593 - social_content_engine.video_creation.video_overlay - INFO - Trimming video to match audio length
+2024-08-31 14:27:12,609 - social_content_engine.video_creation.video_overlay - INFO - Successfully created video and saved to data/final_video_with_cta.mp4.
+2024-08-31 14:53:39,722 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:06:15,627 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:07:15,675 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:08:47,400 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:08:47,400 - social_content_engine.document_processing.pdf_processor - ERROR - Error extracting text from PDF: 'str' object has no attribute 'name'
+2024-08-31 15:09:36,905 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:09:36,905 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 15:09:36,906 - social_content_engine.document_processing.pdf_processor - ERROR - Error extracting text from PDF: PdfFileReader is deprecated and was removed in PyPDF2 3.0.0. Use PdfReader instead.
+2024-08-31 15:10:19,922 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:10:19,922 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 15:10:19,930 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2024-08-31 15:10:19,930 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2024-08-31 15:10:28,063 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 15:12:02,186 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:12:02,186 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 15:12:02,193 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2024-08-31 15:12:02,193 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2024-08-31 15:12:11,281 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-08-31 15:15:19,828 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-08-31 15:15:19,828 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-08-31 15:15:19,834 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2024-08-31 15:15:19,834 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2024-08-31 15:15:24,886 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2024-09-18 06:42:57,441 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2024-09-18 06:42:57,442 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2024-09-18 06:42:57,452 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2024-09-18 06:42:57,452 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2024-09-18 06:43:04,805 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
