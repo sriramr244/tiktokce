@@ -1,0 +1,1561 @@
+{
+  "project": "tiktokce",
+  "root": "/Users/sriram.ranganathan99/dumb/tiktokce",
+  "modules": [
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/README.md",
+      "language": "other",
+      "bytes": 2439
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/main.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/routes.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/run.txt",
+      "language": "other",
+      "bytes": 250
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/audio_conversion/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/audio_conversion/text_to_speech.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "TextToSpeechConverter",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "convert_to_speech",
+              "kind": "function",
+              "signature": "(output_path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "enhance_audio",
+              "kind": "function",
+              "signature": "(audio_clip)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "generate_text_image",
+              "kind": "function",
+              "signature": "(text, image_path, font_size)",
+              "doc": null,
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/config/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/config/settings.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Config",
+          "bases": [],
+          "doc": "Configuration class for the Social Content Engine.\n\nThis class provides a flexible way to configure paths, API keys, and other settings\nfor the Social Content Engine. Default values are provided, but users can override them\nvia keyword arguments.\n\nAttributes:\n    base_dir (str): The base directory for the project. Defaults to the current working directory.\n    data_dir (str): The directory where data files are stored. Defaults to a 'data' folder within the base directory.\n    document_path (str): The path to the document (PDF) file. Defaults to 'Document.pdf' in the data directory.\n    video_path (str): The path to the background video file. Defaults to 'Video.mp4' in the data directory.\n    output_video_path (str): The path where the output video will be saved. Defaults to 'output_video.mp4' in the data directory.\n    audio_path (str): The path where the generated audio file will be saved. Defaults to 'output_audio.mp3' in the data directory.\n    api_key (str): The OpenAI API key for content generation. Defaults to a placeholder string.\n    cta_text (str): The default call-to-action text to be added to videos. Defaults to \"Subscribe Now!\".\n\nMethods:\n    get_document_path(): Returns the document path.\n    get_video_path(): Returns the video path.\n    get_output_video_path(): Returns the output video path.\n    get_audio_path(): Returns the audio path.\n    get_api_key(): Returns the API key.\n    get_cta_text(): Returns the call-to-action text.\n    set_document_path(path): Sets a new document path.\n    set_video_path(path): Sets a new video path.\n    set_output_video_path(path): Sets a new output video path.\n    set_audio_path(path): Sets a new audio path.\n    set_api_key(api_key): Sets a new API key.\n    set_cta_text(text): Sets a new call-to-action text.",
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(**kwargs)",
+              "doc": "Initializes the Config class with optional keyword arguments.\n\nArgs:\n    **kwargs: Arbitrary keyword arguments that can be used to override the default paths and settings.\n\n    - base_dir (str): The base directory for the project.\n    - data_dir (str): The directory where data files are stored.\n    - document_path (str): The path to the document (PDF) file.\n    - video_path (str): The path to the background video file.\n    - output_video_path (str): The path where the output video will be saved.\n    - audio_path (str): The path where the generated audio file will be saved.\n    - api_key (str): The OpenAI API key for content generation.\n    - cta_text (str): The default call-to-action text to be added to videos.\n\nExamples:\n    >>> config = Config(document_path=\"/path/to/document.pdf\", api_key=\"my_openai_api_key\")\n    >>> config = Config()  # Uses all default paths and settings",
+              "decorators": []
+            },
+            {
+              "name": "get_document_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_video_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_output_video_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_audio_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_openai_api_key",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_cta_text",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_document_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_video_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_output_video_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_audio_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_openai_api_key",
+              "kind": "function",
+              "signature": "(api_key)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_cta_text",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": null,
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "OpenAI"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/content_generation/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/content_generation/ai_content_generator.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AIContentGenerator",
+          "bases": [],
+          "doc": "A class to generate content using OpenAI's API.",
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(api_key)",
+              "doc": "Initialize the AIContentGenerator with an API key.\n\nArgs:\n    api_key (str): The API key to authenticate with OpenAI.",
+              "decorators": []
+            },
+            {
+              "name": "generate_content",
+              "kind": "function",
+              "signature": "(prompt)",
+              "doc": "Generate content based on a prompt using OpenAI's API.\n\nArgs:\n    prompt (str): The input text prompt.\n\nReturns:\n    str: The generated content.",
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "openai"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "openai"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "openai"
+        },
+        {
+          "match": "openai"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "OpenAI"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/cta_integration/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/cta_integration/add_cta.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CTAAdder",
+          "bases": [],
+          "doc": "A class to add a call-to-action (CTA) at the end of a video.",
+          "methods": [
+            {
+              "name": "add",
+              "kind": "function",
+              "signature": "(video_file, cta_text, output_file)",
+              "doc": "Add a call-to-action (CTA) to a video.\n\nArgs:\n    video_file (str): Path to the video file.\n    cta_text (str): The CTA text to add to the video.\n    output_file (str): The name of the output video file with the CTA. Defaults to 'final_video_with_cta.mp4'.\n\nReturns:\n    str: The path to the saved video file with the CTA.",
+              "decorators": [
+                "Name"
+              ]
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/document_processing/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/document_processing/pdf_processor.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PDFProcessor",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "extract_text",
+              "kind": "function",
+              "signature": "(pdf_path)",
+              "doc": "Extract text from a PDF file given its file path.",
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/main.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SocialContentEngine",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(api_key, config, video_path, output_video_file, audio_file, cta_text)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "process_document",
+              "kind": "function",
+              "signature": "(pdf_path)",
+              "doc": "Process the provided PDF document to generate video content.",
+              "decorators": []
+            },
+            {
+              "name": "generate_subtitle_segments",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": "Generate subtitle segments based on the provided text.\nThis is a simple segmentation approach; in practice, you may want to use NLP techniques.",
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "openai"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/utils/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/utils/decorators.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "log_execution",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "handle_errors",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "validate_input",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "cache_result",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "require_api_key",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/utils/logger.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "setup_logger",
+          "kind": "function",
+          "signature": "(name, log_file, level)",
+          "doc": "Get a logger with a specified name, log file, and logging level.\n\nArgs:\n    name (str): The name of the logger. Defaults to \"social_content_engine\".\n    log_file (str): The file to which logs should be written. Defaults to \"social_content_engine.log\".\n    level: The logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to logging.INFO.\n\nReturns:\n    logging.Logger: Configured logger instance.",
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/video_library/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/video_library/manage_videos.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/video_overlay.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "VideoOverlay",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(video_path, audio_path, subtitles)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "update_audio_and_subtitles",
+              "kind": "function",
+              "signature": "(audio_path, subtitles)",
+              "doc": "Update the audio and subtitles for the video.",
+              "decorators": []
+            },
+            {
+              "name": "create_final_video",
+              "kind": "function",
+              "signature": "(output_path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "generate_dynamic_subtitles",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "create_text_image",
+              "kind": "function",
+              "signature": "(text, image_path, font_size)",
+              "doc": null,
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/frontend/app.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/meta.config.json",
+      "language": "other",
+      "bytes": 45805
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "read_text",
+          "kind": "function",
+          "signature": "(p)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "safe_json_load",
+          "kind": "function",
+          "signature": "(text)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "detect_language",
+          "kind": "function",
+          "signature": "(path)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "parse_python_file",
+          "kind": "function",
+          "signature": "(path)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "extract_module_docstring",
+          "kind": "function",
+          "signature": "(src)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "extract_py_function",
+          "kind": "function",
+          "signature": "(fn)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "extract_py_class",
+          "kind": "function",
+          "signature": "(cls)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "extract_py_route_from_decorators",
+          "kind": "function",
+          "signature": "(fn)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "fill_py_with_regex",
+          "kind": "function",
+          "signature": "(out, src)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "parse_js_like_file",
+          "kind": "function",
+          "signature": "(path)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "find_regex_matches",
+          "kind": "function",
+          "signature": "(src, patterns, kind)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "discover_dependencies",
+          "kind": "function",
+          "signature": "(root)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "parse_structure_and_contents",
+          "kind": "function",
+          "signature": "(structure_txt, contents_txt, project_root)",
+          "doc": "structure.txt: output of a tree-like listing (best effort)\ncontents.txt: concatenated files with headers like:\n    >>> FILE: relative/path/to/file.py\n    <file content...>\n    >>> END",
+          "decorators": []
+        },
+        {
+          "name": "parse_python_source_virtual",
+          "kind": "function",
+          "signature": "(path, src)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "parse_js_source_virtual",
+          "kind": "function",
+          "signature": "(path, src, lang)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "build_meta",
+          "kind": "function",
+          "signature": "(project_root, structure_txt, contents_txt)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "main",
+          "kind": "function",
+          "signature": "()",
+          "doc": null,
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [
+        {
+          "match": "argparse.ArgumentParser(",
+          "context": "dupe(meta[\"tools\"])\n\n    return meta\n\n\ndef main():\n    ap = argparse.ArgumentParser(description=\"Build meta config for a project\")\n    ap.add_ar"
+        }
+      ],
+      "agent_tool_hints": [
+        {
+          "match": "agent"
+        },
+        {
+          "match": "Agent"
+        },
+        {
+          "match": "agent"
+        },
+        {
+          "match": "agent"
+        },
+        {
+          "match": "agent"
+        },
+        {
+          "match": "agent"
+        },
+        {
+          "match": "tool"
+        },
+        {
+          "match": "tool"
+        },
+        {
+          "match": "tool"
+        },
+        {
+          "match": "tool"
+        },
+        {
+          "match": "tool"
+        },
+        {
+          "match": "tool"
+        },
+        {
+          "match": "@tool"
+        }
+      ],
+      "doc": "Meta Config Builder\n- Walk a project folder OR parse structure.txt + contents.txt\n- Extracts:\n  - modules, functions, classes, methods, signatures, docstrings/JSDoc\n  - web routes (Flask/FastAPI/Express), CLI commands (click / argparse)\n  - simple \"agent\" and \"tool\" hints (file names, decorators, keywords)\n  - dependency hints from package.json / pyproject.toml / requirements*.txt\n- Emits meta.config.json (LLM-friendly) and optional meta.config.yaml"
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/requirements.txt",
+      "language": "other",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/setup.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "openai"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/snapshot_project.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "is_binary",
+          "kind": "function",
+          "signature": "(path)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "normalize_globs",
+          "kind": "function",
+          "signature": "(globs)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "matches_any",
+          "kind": "function",
+          "signature": "(path, globs, root)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "should_include_file",
+          "kind": "function",
+          "signature": "(path, root, include_exts, excludes)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "read_text_lossy",
+          "kind": "function",
+          "signature": "(p, max_bytes)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "redact_secrets",
+          "kind": "function",
+          "signature": "(text)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "hash_file",
+          "kind": "function",
+          "signature": "(path)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "build_structure",
+          "kind": "function",
+          "signature": "(root, files)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "build_contents",
+          "kind": "function",
+          "signature": "(root, files, max_bytes)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "main",
+          "kind": "function",
+          "signature": "()",
+          "doc": null,
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [
+        {
+          "match": "argparse.ArgumentParser(",
+          "context": "---\\n\\n\")\n    return buf.getvalue()\n\n\ndef main():\n    ap = argparse.ArgumentParser(description=\"Create structure.txt and contents.txt snapshots"
+        }
+      ],
+      "agent_tool_hints": [
+        {
+          "match": "OpenAI"
+        }
+      ],
+      "doc": "snapshot_project.py\nCreate two portable snapshots of a codebase:\n\n1) structure.txt  – a tree-like listing (stable, sorted)\n2) contents.txt   – concatenated file contents with clear FILE/END markers\n\nFeatures\n- Include/exclude globs (multiple) and extension filters\n- Skips binaries by default; size limits with per-file override\n- Secrets redaction (API keys, tokens, .env values) before writing\n- Deterministic ordering for reproducible snapshots\n- UTF-8 read with safe fallback; if not decodable => note and skip\n\nUsage\n  python snapshot_project.py --root ./tiktokce\n  python snapshot_project.py --root . --out-structure structure.txt --out-contents contents.txt       --include-ext .py,.txt,.md,.json,.yaml,.yml,.toml       --exclude '**/.git/**' '**/dist/**' '**/build/**' '**/__pycache__/**' '**/.DS_Store' '**/data/*.mp4' '**/data/*.mp3'       --max-bytes 200000\n\nTip: After generating the two files, run the meta builder:\n  python meta_builder.py --root ./tiktokce --structure structure.txt --contents contents.txt --yaml"
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/audio_conversion/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/audio_conversion/text_to_speech.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "TextToSpeechConverter",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "convert_to_speech",
+              "kind": "function",
+              "signature": "(output_path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "enhance_audio",
+              "kind": "function",
+              "signature": "(audio_clip)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "generate_text_image",
+              "kind": "function",
+              "signature": "(text, image_path, font_size)",
+              "doc": null,
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/config/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/config/settings.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Config",
+          "bases": [],
+          "doc": "Configuration class for the Social Content Engine.\n\nThis class provides a flexible way to configure paths, API keys, and other settings\nfor the Social Content Engine. Default values are provided, but users can override them\nvia keyword arguments.\n\nAttributes:\n    base_dir (str): The base directory for the project. Defaults to the current working directory.\n    data_dir (str): The directory where data files are stored. Defaults to a 'data' folder within the base directory.\n    document_path (str): The path to the document (PDF) file. Defaults to 'Document.pdf' in the data directory.\n    video_path (str): The path to the background video file. Defaults to 'Video.mp4' in the data directory.\n    output_video_path (str): The path where the output video will be saved. Defaults to 'output_video.mp4' in the data directory.\n    audio_path (str): The path where the generated audio file will be saved. Defaults to 'output_audio.mp3' in the data directory.\n    api_key (str): The OpenAI API key for content generation. Defaults to a placeholder string.\n    cta_text (str): The default call-to-action text to be added to videos. Defaults to \"Subscribe Now!\".\n\nMethods:\n    get_document_path(): Returns the document path.\n    get_video_path(): Returns the video path.\n    get_output_video_path(): Returns the output video path.\n    get_audio_path(): Returns the audio path.\n    get_api_key(): Returns the API key.\n    get_cta_text(): Returns the call-to-action text.\n    set_document_path(path): Sets a new document path.\n    set_video_path(path): Sets a new video path.\n    set_output_video_path(path): Sets a new output video path.\n    set_audio_path(path): Sets a new audio path.\n    set_api_key(api_key): Sets a new API key.\n    set_cta_text(text): Sets a new call-to-action text.",
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(**kwargs)",
+              "doc": "Initializes the Config class with optional keyword arguments.\n\nArgs:\n    **kwargs: Arbitrary keyword arguments that can be used to override the default paths and settings.\n\n    - base_dir (str): The base directory for the project.\n    - data_dir (str): The directory where data files are stored.\n    - document_path (str): The path to the document (PDF) file.\n    - video_path (str): The path to the background video file.\n    - output_video_path (str): The path where the output video will be saved.\n    - audio_path (str): The path where the generated audio file will be saved.\n    - api_key (str): The OpenAI API key for content generation.\n    - cta_text (str): The default call-to-action text to be added to videos.\n\nExamples:\n    >>> config = Config(document_path=\"/path/to/document.pdf\", api_key=\"my_openai_api_key\")\n    >>> config = Config()  # Uses all default paths and settings",
+              "decorators": []
+            },
+            {
+              "name": "get_document_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_video_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_output_video_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_audio_path",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_openai_api_key",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "get_cta_text",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_document_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_video_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_output_video_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_audio_path",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_openai_api_key",
+              "kind": "function",
+              "signature": "(api_key)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "set_cta_text",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": null,
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "OpenAI"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/content_generation/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/content_generation/ai_content_generator.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AIContentGenerator",
+          "bases": [],
+          "doc": "A class to generate content using OpenAI's API.",
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(api_key)",
+              "doc": "Initialize the AIContentGenerator with an API key.\n\nArgs:\n    api_key (str): The API key to authenticate with OpenAI.",
+              "decorators": []
+            },
+            {
+              "name": "generate_content",
+              "kind": "function",
+              "signature": "(prompt)",
+              "doc": "Generate content based on a prompt using OpenAI's API.\n\nArgs:\n    prompt (str): The input text prompt.\n\nReturns:\n    str: The generated content.",
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "openai"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "openai"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "openai"
+        },
+        {
+          "match": "openai"
+        },
+        {
+          "match": "OpenAI"
+        },
+        {
+          "match": "OpenAI"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/cta_integration/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/cta_integration/add_cta.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CTAAdder",
+          "bases": [],
+          "doc": "A class to add a call-to-action (CTA) at the end of a video.",
+          "methods": [
+            {
+              "name": "add",
+              "kind": "function",
+              "signature": "(video_file, cta_text, output_file)",
+              "doc": "Add a call-to-action (CTA) to a video.\n\nArgs:\n    video_file (str): Path to the video file.\n    cta_text (str): The CTA text to add to the video.\n    output_file (str): The name of the output video file with the CTA. Defaults to 'final_video_with_cta.mp4'.\n\nReturns:\n    str: The path to the saved video file with the CTA.",
+              "decorators": [
+                "Name"
+              ]
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/document_processing/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/document_processing/pdf_processor.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PDFProcessor",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "extract_text",
+              "kind": "function",
+              "signature": "(pdf_path)",
+              "doc": "Extract text from a PDF file given its file path.",
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/main.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SocialContentEngine",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(api_key, config, video_path, output_video_file, audio_file, cta_text)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "process_document",
+              "kind": "function",
+              "signature": "(pdf_path)",
+              "doc": "Process the provided PDF document to generate video content.",
+              "decorators": []
+            },
+            {
+              "name": "generate_subtitle_segments",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": "Generate subtitle segments based on the provided text.\nThis is a simple segmentation approach; in practice, you may want to use NLP techniques.",
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [
+        {
+          "match": "openai"
+        }
+      ],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/utils/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/utils/decorators.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "log_execution",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "handle_errors",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "validate_input",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "cache_result",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        },
+        {
+          "name": "require_api_key",
+          "kind": "function",
+          "signature": "(func)",
+          "doc": null,
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/utils/logger.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "setup_logger",
+          "kind": "function",
+          "signature": "(name, log_file, level)",
+          "doc": "Get a logger with a specified name, log file, and logging level.\n\nArgs:\n    name (str): The name of the logger. Defaults to \"social_content_engine\".\n    log_file (str): The file to which logs should be written. Defaults to \"social_content_engine.log\".\n    level: The logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to logging.INFO.\n\nReturns:\n    logging.Logger: Configured logger instance.",
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/video_library/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/video_library/manage_videos.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/video_overlay.py",
+      "language": "python",
+      "functions": [],
+      "classes": [
+        {
+          "name": "VideoOverlay",
+          "bases": [],
+          "doc": null,
+          "methods": [
+            {
+              "name": "__init__",
+              "kind": "function",
+              "signature": "(video_path, audio_path, subtitles)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "update_audio_and_subtitles",
+              "kind": "function",
+              "signature": "(audio_path, subtitles)",
+              "doc": "Update the audio and subtitles for the video.",
+              "decorators": []
+            },
+            {
+              "name": "create_final_video",
+              "kind": "function",
+              "signature": "(output_path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "generate_dynamic_subtitles",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "create_text_image",
+              "kind": "function",
+              "signature": "(text, image_path, font_size)",
+              "doc": null,
+              "decorators": []
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine.egg-info/SOURCES.txt",
+      "language": "other",
+      "bytes": 1305
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine.egg-info/dependency_links.txt",
+      "language": "other",
+      "bytes": 1
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine.egg-info/requires.txt",
+      "language": "other",
+      "bytes": 33
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine.egg-info/top_level.txt",
+      "language": "other",
+      "bytes": 22
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/test.py",
+      "language": "python",
+      "functions": [
+        {
+          "name": "run_tests",
+          "kind": "function",
+          "signature": "()",
+          "doc": "Run all tests sequentially to validate the Social Content Engine's functionality.",
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/__init__.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_api.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_audio_conversion.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_content_generation.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_document_processing.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    },
+    {
+      "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_video_creation.py",
+      "language": "python",
+      "functions": [],
+      "classes": [],
+      "routes": [],
+      "cli": [],
+      "agent_tool_hints": [],
+      "doc": null
+    }
+  ],
+  "agents": [],
+  "tools": [
+    {
+      "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+      "hint": {
+        "match": "agent"
+      }
+    },
+    {
+      "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+      "hint": {
+        "match": "Agent"
+      }
+    },
+    {
+      "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+      "hint": {
+        "match": "tool"
+      }
+    },
+    {
+      "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+      "hint": {
+        "match": "@tool"
+      }
+    }
+  ],
+  "routes": [],
+  "cli_commands": [
+    {
+      "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+      "match": "argparse.ArgumentParser(",
+      "context": "dupe(meta[\"tools\"])\n\n    return meta\n\n\ndef main():\n    ap = argparse.ArgumentParser(description=\"Build meta config for a project\")\n    ap.add_ar"
+    },
+    {
+      "module": "/Users/sriram.ranganathan99/dumb/tiktokce/snapshot_project.py",
+      "match": "argparse.ArgumentParser(",
+      "context": "---\\n\\n\")\n    return buf.getvalue()\n\n\ndef main():\n    ap = argparse.ArgumentParser(description=\"Create structure.txt and contents.txt snapshots"
+    }
+  ],
+  "dependencies": {
+    "python_requirements": {
+      "requirements.txt": []
+    }
+  },
+  "notes": {
+    "generated_by": "meta_builder.py",
+    "purpose": "LLM-friendly config for code understanding and agent wiring",
+    "version": 1
+  }
+}

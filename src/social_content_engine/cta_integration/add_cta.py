@@ -1,5 +1,6 @@
 from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
 from social_content_engine.utils.logger import setup_logger
+import os
 
 # Set up a logger for the CTAAdder
 logger = setup_logger(__name__)
@@ -53,6 +54,17 @@ class CTAAdder:
         except Exception as e:
             logger.error(f"Error adding CTA to video: {e}")
             raise RuntimeError(f"Error adding CTA to video: {e}")
+        
+    def add_cta(self, video_file: str, cta_text: str, output_file: str = None) -> str:
+        """
+        Instance wrapper so callers can use add_cta(...).
+        If output_file is not provided, create '<input>_with_cta.mp4'.
+        """
+        if not output_file:
+            root, ext = os.path.splitext(video_file)
+            output_file = f"{root}_with_cta{ext or '.mp4'}"
+        return self.add(video_file, cta_text, output_file)
+
 
 
 # Example usage:

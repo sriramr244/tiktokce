@@ -1,0 +1,3826 @@
+tiktokce/
+    README.md
+
+    --- Content of README.md ---
+    Skipped binary file.
+    SHA256: fb6a81f36880d434c4a75e29a874b915fff2c51780e645677b31aeb7fe4853c4
+
+    --- End of README.md ---
+
+    api/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    api/main.py
+
+    --- Content of main.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of main.py ---
+
+    api/routes.py
+
+    --- Content of routes.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of routes.py ---
+
+    api/run.txt
+
+    --- Content of run.txt ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of run.txt ---
+
+    build/lib/social_content_engine/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/audio_conversion/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/audio_conversion/text_to_speech.py
+
+    --- Content of text_to_speech.py ---
+    from moviepy.audio.fx.all import audio_fadein, audio_fadeout, volumex
+    import moviepy.editor as mp
+    from PIL import Image, ImageDraw, ImageFont
+    import os
+    from gtts import gTTS
+    
+    
+    class TextToSpeechConverter:
+        def __init__(self, text):
+            self.text = text
+    
+        def convert_to_speech(self, output_path="output_audio.mp3"):
+            # Convert text to speech using gTTS
+            tts = gTTS(self.text)
+            tts.save(output_path)
+    
+            # Load the generated audio using moviepy
+            audio_clip = mp.AudioFileClip(output_path)
+    
+            # Enhance the audio with fade in/out and volume adjustments
+            enhanced_audio = self.enhance_audio(audio_clip)
+    
+            # Save the enhanced audio
+            enhanced_output_path = os.path.join(
+                os.path.dirname(output_path), "enhanced_" + os.path.basename(output_path)
+            )
+            enhanced_audio.write_audiofile(enhanced_output_path)
+    
+            return enhanced_output_path
+    
+        def enhance_audio(self, audio_clip):
+            audio_clip = audio_fadein(audio_clip, 2)  # Fade in for 2 seconds
+            audio_clip = audio_fadeout(audio_clip, 2)  # Fade out for 2 seconds
+            audio_clip = volumex(audio_clip, 1.2)  # Increase volume by 20%
+            return audio_clip
+    
+        def generate_text_image(self, text, image_path, font_size=24):
+            # Create an image with text using Pillow
+            font = ImageFont.truetype("arial.ttf", font_size)
+            image = Image.new("RGB", (800, 200), color=(73, 109, 137))
+            draw = ImageDraw.Draw(image)
+            draw.text((10, 90), text, font=font, fill=(255, 255, 255))
+            image.save(image_path)
+    
+    
+    # Example Usage:
+    # converter = TextToSpeechConverter("Hello, world!")
+    # converter.generate_text_image("Hello, world!", "text_image.png")
+
+    --- End of text_to_speech.py ---
+
+    build/lib/social_content_engine/config/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/config/settings.py
+
+    --- Content of settings.py ---
+    import os
+    
+    
+    class Config:
+        """
+        Configuration class for the Social Content Engine.
+    
+        This class provides a flexible way to configure paths, API keys, and other settings
+        for the Social Content Engine. Default values are provided, but users can override them
+        via keyword arguments.
+    
+        Attributes:
+            base_dir (str): The base directory for the project. Defaults to the current working directory.
+            data_dir (str): The directory where data files are stored. Defaults to a 'data' folder within the base directory.
+            document_path (str): The path to the document (PDF) file. Defaults to 'Document.pdf' in the data directory.
+            video_path (str): The path to the background video file. Defaults to 'Video.mp4' in the data directory.
+            output_video_path (str): The path where the output video will be saved. Defaults to 'output_video.mp4' in the data directory.
+            audio_path (str): The path where the generated audio file will be saved. Defaults to 'output_audio.mp3' in the data directory.
+            api_key (str): The OpenAI API key for content generation. Defaults to a placeholder string.
+            cta_text (str): The default call-to-action text to be added to videos. Defaults to "Subscribe Now!".
+    
+        Methods:
+            get_document_path(): Returns the document path.
+            get_video_path(): Returns the video path.
+            get_output_video_path(): Returns the output video path.
+            get_audio_path(): Returns the audio path.
+            get_api_key(): Returns the API key.
+            get_cta_text(): Returns the call-to-action text.
+            set_document_path(path): Sets a new document path.
+            set_video_path(path): Sets a new video path.
+            set_output_video_path(path): Sets a new output video path.
+            set_audio_path(path): Sets a new audio path.
+            set_api_key(api_key): Sets a new API key.
+            set_cta_text(text): Sets a new call-to-action text.
+        """
+    
+        def __init__(self, **kwargs):
+            """
+            Initializes the Config class with optional keyword arguments.
+    
+            Args:
+                **kwargs: Arbitrary keyword arguments that can be used to override the default paths and settings.
+    
+                - base_dir (str): The base directory for the project.
+                - data_dir (str): The directory where data files are stored.
+                - document_path (str): The path to the document (PDF) file.
+                - video_path (str): The path to the background video file.
+                - output_video_path (str): The path where the output video will be saved.
+                - audio_path (str): The path where the generated audio file will be saved.
+                - api_key (str): The OpenAI API key for content generation.
+                - cta_text (str): The default call-to-action text to be added to videos.
+    
+            Examples:
+                >>> config = Config(document_path="/path/to/document.pdf", api_key="***REDACTED***")
+                >>> config = Config()  # Uses all default paths and settings
+            """
+            # Set base directory and data directory
+            self.base_dir = kwargs.get("base_dir", os.getcwd())
+            self.data_dir = kwargs.get("data_dir", os.path.join(self.base_dir, "data"))
+    
+            # Set paths, allowing overrides via kwargs
+            self.document_path = kwargs.get(
+                "document_path", os.path.join(self.data_dir, "Document.pdf")
+            )
+            self.video_path = kwargs.get(
+                "video_path", os.path.join(self.data_dir, "Video.mp4")
+            )
+            self.output_video_path = kwargs.get(
+                "output_video_path", os.path.join(self.data_dir, "output_video.mp4")
+            )
+            self.audio_path = kwargs.get(
+                "audio_path", os.path.join(self.data_dir, "output_audio.mp3")
+            )
+    
+            # Set API key
+            self.api_key = kwargs.get("api_key", "your_openai_api_key_here")
+    
+            # Call-to-action text
+            self.cta_text = kwargs.get("cta_text", "Subscribe Now!")
+    
+        def get_document_path(self):
+            return self.document_path
+    
+        def get_video_path(self):
+            return self.video_path
+    
+        def get_output_video_path(self):
+            return self.output_video_path
+    
+        def get_audio_path(self):
+            return self.audio_path
+    
+        def get_openai_api_key(self):
+            return self.api_key
+    
+        def get_cta_text(self):
+            return self.cta_text
+    
+        # Setters
+        def set_document_path(self, path):
+            self.document_path = path
+    
+        def set_video_path(self, path):
+            self.video_path = path
+    
+        def set_output_video_path(self, path):
+            self.output_video_path = path
+    
+        def set_audio_path(self, path):
+            self.audio_path = path
+    
+        def set_openai_api_key(self, api_key):
+            self.api_key = api_key
+    
+        def set_cta_text(self, text):
+            self.cta_text = text
+
+    --- End of settings.py ---
+
+    build/lib/social_content_engine/content_generation/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/content_generation/ai_content_generator.py
+
+    --- Content of ai_content_generator.py ---
+    import openai
+    from social_content_engine.utils.logger import setup_logger
+    
+    # Set up a logger for the AIContentGenerator
+    logger = setup_logger(__name__)
+    
+    
+    class AIContentGenerator:
+        """
+        A class to generate content using OpenAI's API.
+        """
+    
+        def __init__(self, api_key: str):
+            """
+            Initialize the AIContentGenerator with an API key.
+    
+            Args:
+                api_key (str): The API key to authenticate with OpenAI.
+            """
+            self.api_key = api_key
+            openai.api_key = self.api_key
+            logger.info("Initialized AIContentGenerator with provided API key.")
+    
+        def generate_content(self, prompt: str) -> str:
+            """
+            Generate content based on a prompt using OpenAI's API.
+    
+            Args:
+                prompt (str): The input text prompt.
+    
+            Returns:
+                str: The generated content.
+            """
+            try:
+                logger.info(f"Generating content with prompt: {prompt}")
+                response = openai.chat.completions.create(
+                    model="gpt-4",  # or "gpt-3.5-turbo" or another model as needed
+                    messages=[
+                        {"role": "system", "content": "You are a helpful assistant."},
+                        {"role": "user", "content": prompt},
+                    ],
+                    max_tokens=500,  # Adjust as needed
+                    temperature=0.7,  # Adjust for creativity vs. determinism
+                )
+                content = response.choices[0].message.content  # Corrected access method
+                logger.info("Successfully generated content.")
+                return content
+            except openai.OpenAIError as e:
+                logger.error(f"OpenAI API error: {e}")
+                raise RuntimeError(f"OpenAI API error: {e}")
+            except Exception as e:
+                logger.error(f"Unexpected error during content generation: {e}")
+                raise RuntimeError(f"Unexpected error during content generation: {e}")
+
+    --- End of ai_content_generator.py ---
+
+    build/lib/social_content_engine/cta_integration/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/cta_integration/add_cta.py
+
+    --- Content of add_cta.py ---
+    from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
+    from social_content_engine.utils.logger import setup_logger
+    
+    # Set up a logger for the CTAAdder
+    logger = setup_logger(__name__)
+    
+    
+    class CTAAdder:
+        """
+        A class to add a call-to-action (CTA) at the end of a video.
+        """
+    
+        @staticmethod
+        def add(
+            video_file: str, cta_text: str, output_file: str = "final_video_with_cta.mp4"
+        ) -> str:
+            """
+            Add a call-to-action (CTA) to a video.
+    
+            Args:
+                video_file (str): Path to the video file.
+                cta_text (str): The CTA text to add to the video.
+                output_file (str): The name of the output video file with the CTA. Defaults to 'final_video_with_cta.mp4'.
+    
+            Returns:
+                str: The path to the saved video file with the CTA.
+            """
+            try:
+                logger.info(f"Adding CTA to video: {video_file}")
+    
+                # Load the video file
+                video = VideoFileClip(video_file)
+                video_duration = video.duration
+    
+                # Create a text clip for the CTA
+                cta_clip = TextClip(
+                    cta_text, fontsize=30, color="white", bg_color="black", size=video.size
+                )
+                cta_clip = cta_clip.set_pos("center").set_duration(
+                    5
+                )  # Show CTA for 5 seconds
+    
+                # Position the CTA clip at the end of the video
+                cta_clip = cta_clip.set_start(video_duration - 5)
+    
+                # Create the final composite video with the CTA
+                final_clip = CompositeVideoClip([video, cta_clip])
+    
+                # Write the final video file with the CTA
+                final_clip.write_videofile(output_file, codec="libx264", audio_codec="aac")
+                logger.info(f"Successfully added CTA and saved to {output_file}.")
+                return output_file
+            except Exception as e:
+                logger.error(f"Error adding CTA to video: {e}")
+                raise RuntimeError(f"Error adding CTA to video: {e}")
+    
+    
+    # Example usage:
+    # video_file = "final_video.mp4"
+    # cta_text = "Subscribe to our channel!"
+    # cta_adder = CTAAdder()
+    # final_video_with_cta = cta_adder.add(video_file, cta_text)
+    # print(f"Video with CTA saved to {final_video_with_cta}")
+
+    --- End of add_cta.py ---
+
+    build/lib/social_content_engine/document_processing/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/document_processing/pdf_processor.py
+
+    --- Content of pdf_processor.py ---
+    import logging
+    from PyPDF2 import PdfReader
+    
+    logger = logging.getLogger(__name__)
+    
+    
+    class PDFProcessor:
+        def extract_text(self, pdf_path: str) -> str:
+            """
+            Extract text from a PDF file given its file path.
+            """
+            try:
+                logger.info(f"Starting text extraction from PDF: {pdf_path}")
+    
+                # Open the PDF file
+                with open(pdf_path, "rb") as pdf_file:
+                    reader = PdfReader(pdf_file)
+                    text = ""
+                    for page_num in range(len(reader.pages)):
+                        page = reader.pages[page_num]
+                        text += page.extract_text()
+    
+                logger.info(f"Text extraction completed from PDF: {pdf_path}")
+                return text
+    
+            except Exception as e:
+                logger.error(f"Error extracting text from PDF: {e}")
+                raise RuntimeError(f"Error extracting text from PDF: {e}")
+
+    --- End of pdf_processor.py ---
+
+    build/lib/social_content_engine/main.py
+
+    --- Content of main.py ---
+    from typing import Optional, Union
+    import os
+    from social_content_engine.config.settings import Config
+    from social_content_engine.document_processing.pdf_processor import PDFProcessor
+    from social_content_engine.content_generation.ai_content_generator import (
+        AIContentGenerator,
+    )
+    from social_content_engine.audio_conversion.text_to_speech import TextToSpeechConverter
+    from social_content_engine.video_creation.video_overlay import VideoOverlay
+    from social_content_engine.cta_integration.add_cta import CTAAdder
+    import logging
+    
+    
+    class SocialContentEngine:
+        def __init__(
+            self,
+            api_key: str,
+            config: Optional[Config] = None,
+            video_path: Optional[str] = None,  # Updated this line
+            output_video_file: Optional[str] = None,
+            audio_file: Optional[str] = None,
+            cta_text: Optional[str] = None,
+        ):
+            self.config = config or Config()
+            self.api_key = api_key
+            self.background_video_file = video_path or self.config.get_video_path()
+            self.output_video_file = (
+                output_video_file or self.config.get_output_video_path()
+            )
+            self.audio_file = audio_file or self.config.get_audio_path()
+            self.cta_text = cta_text or self.config.get_cta_text()
+    
+            self.pdf_processor = PDFProcessor()
+            self.content_generator = AIContentGenerator(api_key=self.api_key)
+            self.tts_converter = None  # Initialize as None, will be set later
+            self.video_overlay = VideoOverlay(self.background_video_file, self.audio_file)
+            self.cta_adder = CTAAdder()
+    
+        def process_document(self, pdf_path: str):
+            """
+            Process the provided PDF document to generate video content.
+            """
+            # Step 1: Extract text from the PDF
+            extracted_text = self.pdf_processor.extract_text(pdf_path)
+            if not extracted_text:
+                raise ValueError("No text extracted from the document.")
+    
+            # Step 2: Generate content for the video
+            generated_content = self.content_generator.generate_content(extracted_text)
+    
+            # Step 3: Convert the generated content to speech
+            self.tts_converter = TextToSpeechConverter(
+                generated_content
+            )  # Pass the text here
+            enhanced_audio_path = self.tts_converter.convert_to_speech()
+    
+            self.video_overlay.update_audio_and_subtitles(
+                enhanced_audio_path, subtitle_segments
+            )
+            self.video_overlay.create_final_video(self.output_video_file)
+    
+            # Step 5: Add CTA to the video
+            final_video_path_with_cta = self.cta_adder.add_cta(
+                self.output_video_file, self.cta_text
+            )
+    
+            logging.info(f"Final video with CTA saved at {final_video_path_with_cta}")
+            return final_video_path_with_cta
+    
+        def generate_subtitle_segments(self, text: str):
+            """
+            Generate subtitle segments based on the provided text.
+            This is a simple segmentation approach; in practice, you may want to use NLP techniques.
+            """
+            lines = text.split("\n")
+            subtitle_segments = []
+            start_time = 0
+            for line in lines:
+                duration = (
+                    len(line.split()) // 2
+                )  # Approximate duration based on word count
+                subtitle_segments.append((start_time, start_time + duration, line))
+                start_time += duration
+            return subtitle_segments
+    
+    
+    # if __name__ == "__main__":
+    #     # Example usage
+    #     api_key = "***REDACTED***"
+    #     pdf_path = "data/Default_Document.pdf"
+    #     video_path = "data/Default_Video.mp4"
+    #     output_video_path = "data/final_video_with_subtitles.mp4"
+    #     cta_text = "Subscribe to our channel!"
+    
+    #     engine = SocialContentEngine(
+    #         api_key=api_key,
+    #         video_path=video_path,  # Use the correct argument name
+    #         output_video_file=output_video_path,
+    #     )
+    #     engine.process_document(pdf_path)
+
+    --- End of main.py ---
+
+    build/lib/social_content_engine/utils/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/utils/decorators.py
+
+    --- Content of decorators.py ---
+    import functools
+    import logging
+    import time
+    from functools import lru_cache
+    
+    
+    # Logging decorator
+    def log_execution(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            logging.info(f"Executing {func.__name__} with args: {args}, kwargs: {kwargs}")
+            start_time = time.time()
+            result = func(*args, **kwargs)
+            duration = time.time() - start_time
+            logging.info(f"Finished {func.__name__} in {duration:.4f} seconds")
+            return result
+    
+        return wrapper
+    
+    
+    # Error handling decorator
+    def handle_errors(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                logging.error(f"Error occurred in {func.__name__}: {str(e)}")
+                raise  # Optionally re-raise or handle the error differently
+    
+        return wrapper
+    
+    
+    # Input validation decorator
+    def validate_input(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for arg in args:
+                if isinstance(arg, str) and not arg.strip():
+                    raise ValueError(f"Invalid input provided to {func.__name__}")
+            return func(*args, **kwargs)
+    
+        return wrapper
+    
+    
+    # Caching decorator
+    def cache_result(func):
+        @functools.wraps(func)
+        @lru_cache(maxsize=128)  # Adjust maxsize based on expected use
+        def wrapper(*args, **kwargs):
+            return func(*args, **kwargs)
+    
+        return wrapper
+    
+    
+    # API key requirement decorator
+    def require_api_key(func):
+        @functools.wraps(func)
+        def wrapper(self, *args, **kwargs):
+            if not self.api_key:
+                raise ValueError("API key is required to execute this function")
+            return func(self, *args, **kwargs)
+    
+        return wrapper
+
+    --- End of decorators.py ---
+
+    build/lib/social_content_engine/utils/logger.py
+
+    --- Content of logger.py ---
+    import logging
+    
+    
+    def setup_logger(
+        name: str = "social_content_engine",
+        log_file: str = "social_content_engine.log",
+        level=logging.INFO,
+    ):
+        """
+        Get a logger with a specified name, log file, and logging level.
+    
+        Args:
+            name (str): The name of the logger. Defaults to "social_content_engine".
+            log_file (str): The file to which logs should be written. Defaults to "social_content_engine.log".
+            level: The logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to logging.INFO.
+    
+        Returns:
+            logging.Logger: Configured logger instance.
+        """
+        logger = logging.getLogger(name)
+    
+        # Set the logging level
+        logger.setLevel(level)
+    
+        # Create handlers if they are not already added
+        if not logger.hasHandlers():
+            c_handler = logging.StreamHandler()
+            f_handler = logging.FileHandler(log_file)
+            c_handler.setLevel(logging.WARNING)
+            f_handler.setLevel(level)
+    
+            # Create formatters and add it to handlers
+            c_format = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
+            f_format = logging.Formatter(
+                "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+            )
+            c_handler.setFormatter(c_format)
+            f_handler.setFormatter(f_format)
+    
+            # Add handlers to the logger
+            logger.addHandler(c_handler)
+            logger.addHandler(f_handler)
+    
+        return logger
+    
+    
+    # Create a global logger instance
+    logger = setup_logger()
+
+    --- End of logger.py ---
+
+    build/lib/social_content_engine/video_creation/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/video_creation/video_library/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    build/lib/social_content_engine/video_creation/video_library/manage_videos.py
+
+    --- Content of manage_videos.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of manage_videos.py ---
+
+    build/lib/social_content_engine/video_creation/video_overlay.py
+
+    --- Content of video_overlay.py ---
+    import moviepy.editor as mp
+    from PIL import Image, ImageDraw, ImageFont
+    
+    
+    import moviepy.editor as mp
+    
+    
+    class VideoOverlay:
+        def __init__(self, video_path, audio_path, subtitles=[]):
+            self.video_path = video_path
+            self.audio_path = audio_path
+            self.subtitles = subtitles
+    
+        def update_audio_and_subtitles(self, audio_path, subtitles):
+            """
+            Update the audio and subtitles for the video.
+            """
+            self.audio_path = audio_path
+            self.subtitles = subtitles
+    
+        def create_final_video(self, output_path):
+            video_clip = mp.VideoFileClip(self.video_path)
+            audio_clip = mp.AudioFileClip(self.audio_path)
+    
+            # Generate and add dynamic subtitles using Pillow
+            subtitle_clips = self.generate_dynamic_subtitles()
+            final_video = mp.CompositeVideoClip([video_clip, *subtitle_clips]).set_audio(
+                audio_clip
+            )
+    
+            final_video.write_videofile(output_path, codec="libx264", audio_codec="aac")
+    
+        def generate_dynamic_subtitles(self):
+            subtitle_clips = []
+            for start_time, end_time, text in self.subtitles:
+                image_path = f"subtitle_{start_time}.png"
+                self.create_text_image(text, image_path)
+                subtitle_clip = (
+                    mp.ImageClip(image_path)
+                    .set_duration(end_time - start_time)
+                    .set_start(start_time)
+                )
+                subtitle_clips.append(subtitle_clip)
+            return subtitle_clips
+    
+        def create_text_image(self, text, image_path, font_size=24):
+            font = ImageFont.truetype("arial.ttf", font_size)
+            image = Image.new("RGB", (800, 200), color=(73, 109, 137))
+            draw = ImageDraw.Draw(image)
+            draw.text((10, 90), text, font=font, fill=(255, 255, 255))
+            image.save(image_path)
+
+    --- End of video_overlay.py ---
+
+    frontend/app.py
+
+    --- Content of app.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of app.py ---
+
+    meta.config.json
+
+    --- Content of meta.config.json ---
+    {
+      "project": "tiktokce",
+      "root": "/Users/sriram.ranganathan99/dumb/tiktokce",
+      "modules": [
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+          "language": "python",
+          "functions": [
+            {
+              "name": "read_text",
+              "kind": "function",
+              "signature": "(p)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "safe_json_load",
+              "kind": "function",
+              "signature": "(text)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "detect_language",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "parse_python_file",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "extract_module_docstring",
+              "kind": "function",
+              "signature": "(src)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "extract_py_function",
+              "kind": "function",
+              "signature": "(fn)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "extract_py_class",
+              "kind": "function",
+              "signature": "(cls)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "extract_py_route_from_decorators",
+              "kind": "function",
+              "signature": "(fn)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "fill_py_with_regex",
+              "kind": "function",
+              "signature": "(out, src)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "parse_js_like_file",
+              "kind": "function",
+              "signature": "(path)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "find_regex_matches",
+              "kind": "function",
+              "signature": "(src, patterns, kind)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "discover_dependencies",
+              "kind": "function",
+              "signature": "(root)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "parse_structure_and_contents",
+              "kind": "function",
+              "signature": "(structure_txt, contents_txt, project_root)",
+              "doc": "structure.txt: output of a tree-like listing (best effort)\ncontents.txt: concatenated files with headers like:\n    >>> FILE: relative/path/to/file.py\n    <file content...>\n    >>> END",
+              "decorators": []
+            },
+            {
+              "name": "parse_python_source_virtual",
+              "kind": "function",
+              "signature": "(path, src)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "parse_js_source_virtual",
+              "kind": "function",
+              "signature": "(path, src, lang)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "build_meta",
+              "kind": "function",
+              "signature": "(project_root, structure_txt, contents_txt)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "main",
+              "kind": "function",
+              "signature": "()",
+              "doc": null,
+              "decorators": []
+            }
+          ],
+          "classes": [],
+          "routes": [],
+          "cli": [
+            {
+              "match": "argparse.ArgumentParser(",
+              "context": "dupe(meta[\"tools\"])\n\n    return meta\n\n\ndef main():\n    ap = argparse.ArgumentParser(description=\"Build meta config for a project\")\n    ap.add_ar"
+            }
+          ],
+          "agent_tool_hints": [
+            {
+              "match": "agent"
+            },
+            {
+              "match": "Agent"
+            },
+            {
+              "match": "agent"
+            },
+            {
+              "match": "agent"
+            },
+            {
+              "match": "agent"
+            },
+            {
+              "match": "agent"
+            },
+            {
+              "match": "tool"
+            },
+            {
+              "match": "tool"
+            },
+            {
+              "match": "tool"
+            },
+            {
+              "match": "tool"
+            },
+            {
+              "match": "tool"
+            },
+            {
+              "match": "tool"
+            },
+            {
+              "match": "@tool"
+            }
+          ],
+          "doc": "Meta Config Builder\n- Walk a project folder OR parse structure.txt + contents.txt\n- Extracts:\n  - modules, functions, classes, methods, signatures, docstrings/JSDoc\n  - web routes (Flask/FastAPI/Express), CLI commands (click / argparse)\n  - simple \"agent\" and \"tool\" hints (file names, decorators, keywords)\n  - dependency hints from package.json / pyproject.toml / requirements*.txt\n- Emits meta.config.json (LLM-friendly) and optional meta.config.yaml"
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/test.py",
+          "language": "python",
+          "functions": [
+            {
+              "name": "run_tests",
+              "kind": "function",
+              "signature": "()",
+              "doc": "Run all tests sequentially to validate the Social Content Engine's functionality.",
+              "decorators": []
+            }
+          ],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/setup.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "openai"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/frontend/app.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_content_generation.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_audio_conversion.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_document_processing.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_video_creation.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/tests/test_api.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/main.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/api/routes.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/main.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "SocialContentEngine",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(api_key, config, video_path, output_video_file, audio_file, cta_text)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "process_document",
+                  "kind": "function",
+                  "signature": "(pdf_path)",
+                  "doc": "Process the provided PDF document to generate video content.",
+                  "decorators": []
+                },
+                {
+                  "name": "generate_subtitle_segments",
+                  "kind": "function",
+                  "signature": "(text)",
+                  "doc": "Generate subtitle segments based on the provided text.\nThis is a simple segmentation approach; in practice, you may want to use NLP techniques.",
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "openai"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/cta_integration/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/cta_integration/add_cta.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "CTAAdder",
+              "bases": [],
+              "doc": "A class to add a call-to-action (CTA) at the end of a video.",
+              "methods": [
+                {
+                  "name": "add",
+                  "kind": "function",
+                  "signature": "(video_file, cta_text, output_file)",
+                  "doc": "Add a call-to-action (CTA) to a video.\n\nArgs:\n    video_file (str): Path to the video file.\n    cta_text (str): The CTA text to add to the video.\n    output_file (str): The name of the output video file with the CTA. Defaults to 'final_video_with_cta.mp4'.\n\nReturns:\n    str: The path to the saved video file with the CTA.",
+                  "decorators": [
+                    "Name"
+                  ]
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/content_generation/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/content_generation/ai_content_generator.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "AIContentGenerator",
+              "bases": [],
+              "doc": "A class to generate content using OpenAI's API.",
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(api_key)",
+                  "doc": "Initialize the AIContentGenerator with an API key.\n\nArgs:\n    api_key (str): The API key to authenticate with OpenAI.",
+                  "decorators": []
+                },
+                {
+                  "name": "generate_content",
+                  "kind": "function",
+                  "signature": "(prompt)",
+                  "doc": "Generate content based on a prompt using OpenAI's API.\n\nArgs:\n    prompt (str): The input text prompt.\n\nReturns:\n    str: The generated content.",
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "openai"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "openai"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "openai"
+            },
+            {
+              "match": "openai"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "OpenAI"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/audio_conversion/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/audio_conversion/text_to_speech.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "TextToSpeechConverter",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(text)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "convert_to_speech",
+                  "kind": "function",
+                  "signature": "(output_path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "enhance_audio",
+                  "kind": "function",
+                  "signature": "(audio_clip)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "generate_text_image",
+                  "kind": "function",
+                  "signature": "(text, image_path, font_size)",
+                  "doc": null,
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/video_overlay.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "VideoOverlay",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(video_path, audio_path, subtitles)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "update_audio_and_subtitles",
+                  "kind": "function",
+                  "signature": "(audio_path, subtitles)",
+                  "doc": "Update the audio and subtitles for the video.",
+                  "decorators": []
+                },
+                {
+                  "name": "create_final_video",
+                  "kind": "function",
+                  "signature": "(output_path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "generate_dynamic_subtitles",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "create_text_image",
+                  "kind": "function",
+                  "signature": "(text, image_path, font_size)",
+                  "doc": null,
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/video_library/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/video_creation/video_library/manage_videos.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/config/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/config/settings.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "Config",
+              "bases": [],
+              "doc": "Configuration class for the Social Content Engine.\n\nThis class provides a flexible way to configure paths, API keys, and other settings\nfor the Social Content Engine. Default values are provided, but users can override them\nvia keyword arguments.\n\nAttributes:\n    base_dir (str): The base directory for the project. Defaults to the current working directory.\n    data_dir (str): The directory where data files are stored. Defaults to a 'data' folder within the base directory.\n    document_path (str): The path to the document (PDF) file. Defaults to 'Document.pdf' in the data directory.\n    video_path (str): The path to the background video file. Defaults to 'Video.mp4' in the data directory.\n    output_video_path (str): The path where the output video will be saved. Defaults to 'output_video.mp4' in the data directory.\n    audio_path (str): The path where the generated audio file will be saved. Defaults to 'output_audio.mp3' in the data directory.\n    api_key (str): The OpenAI API key for content generation. Defaults to a placeholder string.\n    cta_text (str): The default call-to-action text to be added to videos. Defaults to \"Subscribe Now!\".\n\nMethods:\n    get_document_path(): Returns the document path.\n    get_video_path(): Returns the video path.\n    get_output_video_path(): Returns the output video path.\n    get_audio_path(): Returns the audio path.\n    get_api_key(): Returns the API key.\n    get_cta_text(): Returns the call-to-action text.\n    set_document_path(path): Sets a new document path.\n    set_video_path(path): Sets a new video path.\n    set_output_video_path(path): Sets a new output video path.\n    set_audio_path(path): Sets a new audio path.\n    set_api_key(api_key): Sets a new API key.\n    set_cta_text(text): Sets a new call-to-action text.",
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(**kwargs)",
+                  "doc": "Initializes the Config class with optional keyword arguments.\n\nArgs:\n    **kwargs: Arbitrary keyword arguments that can be used to override the default paths and settings.\n\n    - base_dir (str): The base directory for the project.\n    - data_dir (str): The directory where data files are stored.\n    - document_path (str): The path to the document (PDF) file.\n    - video_path (str): The path to the background video file.\n    - output_video_path (str): The path where the output video will be saved.\n    - audio_path (str): The path where the generated audio file will be saved.\n    - api_key (str): The OpenAI API key for content generation.\n    - cta_text (str): The default call-to-action text to be added to videos.\n\nExamples:\n    >>> config = Config(document_path=\"/path/to/document.pdf\", api_key=\"my_openai_api_key\")\n    >>> config = Config()  # Uses all default paths and settings",
+                  "decorators": []
+                },
+                {
+                  "name": "get_document_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_video_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_output_video_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_audio_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_openai_api_key",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_cta_text",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_document_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_video_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_output_video_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_audio_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_openai_api_key",
+                  "kind": "function",
+                  "signature": "(api_key)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_cta_text",
+                  "kind": "function",
+                  "signature": "(text)",
+                  "doc": null,
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "OpenAI"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/utils/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/utils/logger.py",
+          "language": "python",
+          "functions": [
+            {
+              "name": "setup_logger",
+              "kind": "function",
+              "signature": "(name, log_file, level)",
+              "doc": "Get a logger with a specified name, log file, and logging level.\n\nArgs:\n    name (str): The name of the logger. Defaults to \"social_content_engine\".\n    log_file (str): The file to which logs should be written. Defaults to \"social_content_engine.log\".\n    level: The logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to logging.INFO.\n\nReturns:\n    logging.Logger: Configured logger instance.",
+              "decorators": []
+            }
+          ],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/utils/decorators.py",
+          "language": "python",
+          "functions": [
+            {
+              "name": "log_execution",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "handle_errors",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "validate_input",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "cache_result",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "require_api_key",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            }
+          ],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/document_processing/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/build/lib/social_content_engine/document_processing/pdf_processor.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "PDFProcessor",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "extract_text",
+                  "kind": "function",
+                  "signature": "(pdf_path)",
+                  "doc": "Extract text from a PDF file given its file path.",
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/main.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "SocialContentEngine",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(api_key, config, video_path, output_video_file, audio_file, cta_text)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "process_document",
+                  "kind": "function",
+                  "signature": "(pdf_path)",
+                  "doc": "Process the provided PDF document to generate video content.",
+                  "decorators": []
+                },
+                {
+                  "name": "generate_subtitle_segments",
+                  "kind": "function",
+                  "signature": "(text)",
+                  "doc": "Generate subtitle segments based on the provided text.\nThis is a simple segmentation approach; in practice, you may want to use NLP techniques.",
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "openai"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/cta_integration/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/cta_integration/add_cta.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "CTAAdder",
+              "bases": [],
+              "doc": "A class to add a call-to-action (CTA) at the end of a video.",
+              "methods": [
+                {
+                  "name": "add",
+                  "kind": "function",
+                  "signature": "(video_file, cta_text, output_file)",
+                  "doc": "Add a call-to-action (CTA) to a video.\n\nArgs:\n    video_file (str): Path to the video file.\n    cta_text (str): The CTA text to add to the video.\n    output_file (str): The name of the output video file with the CTA. Defaults to 'final_video_with_cta.mp4'.\n\nReturns:\n    str: The path to the saved video file with the CTA.",
+                  "decorators": [
+                    "Name"
+                  ]
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/content_generation/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/content_generation/ai_content_generator.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "AIContentGenerator",
+              "bases": [],
+              "doc": "A class to generate content using OpenAI's API.",
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(api_key)",
+                  "doc": "Initialize the AIContentGenerator with an API key.\n\nArgs:\n    api_key (str): The API key to authenticate with OpenAI.",
+                  "decorators": []
+                },
+                {
+                  "name": "generate_content",
+                  "kind": "function",
+                  "signature": "(prompt)",
+                  "doc": "Generate content based on a prompt using OpenAI's API.\n\nArgs:\n    prompt (str): The input text prompt.\n\nReturns:\n    str: The generated content.",
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "openai"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "openai"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "openai"
+            },
+            {
+              "match": "openai"
+            },
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "OpenAI"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/audio_conversion/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/audio_conversion/text_to_speech.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "TextToSpeechConverter",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(text)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "convert_to_speech",
+                  "kind": "function",
+                  "signature": "(output_path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "enhance_audio",
+                  "kind": "function",
+                  "signature": "(audio_clip)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "generate_text_image",
+                  "kind": "function",
+                  "signature": "(text, image_path, font_size)",
+                  "doc": null,
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/video_overlay.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "VideoOverlay",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(video_path, audio_path, subtitles)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "update_audio_and_subtitles",
+                  "kind": "function",
+                  "signature": "(audio_path, subtitles)",
+                  "doc": "Update the audio and subtitles for the video.",
+                  "decorators": []
+                },
+                {
+                  "name": "create_final_video",
+                  "kind": "function",
+                  "signature": "(output_path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "generate_dynamic_subtitles",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "create_text_image",
+                  "kind": "function",
+                  "signature": "(text, image_path, font_size)",
+                  "doc": null,
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/video_library/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/video_creation/video_library/manage_videos.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/config/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/config/settings.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "Config",
+              "bases": [],
+              "doc": "Configuration class for the Social Content Engine.\n\nThis class provides a flexible way to configure paths, API keys, and other settings\nfor the Social Content Engine. Default values are provided, but users can override them\nvia keyword arguments.\n\nAttributes:\n    base_dir (str): The base directory for the project. Defaults to the current working directory.\n    data_dir (str): The directory where data files are stored. Defaults to a 'data' folder within the base directory.\n    document_path (str): The path to the document (PDF) file. Defaults to 'Document.pdf' in the data directory.\n    video_path (str): The path to the background video file. Defaults to 'Video.mp4' in the data directory.\n    output_video_path (str): The path where the output video will be saved. Defaults to 'output_video.mp4' in the data directory.\n    audio_path (str): The path where the generated audio file will be saved. Defaults to 'output_audio.mp3' in the data directory.\n    api_key (str): The OpenAI API key for content generation. Defaults to a placeholder string.\n    cta_text (str): The default call-to-action text to be added to videos. Defaults to \"Subscribe Now!\".\n\nMethods:\n    get_document_path(): Returns the document path.\n    get_video_path(): Returns the video path.\n    get_output_video_path(): Returns the output video path.\n    get_audio_path(): Returns the audio path.\n    get_api_key(): Returns the API key.\n    get_cta_text(): Returns the call-to-action text.\n    set_document_path(path): Sets a new document path.\n    set_video_path(path): Sets a new video path.\n    set_output_video_path(path): Sets a new output video path.\n    set_audio_path(path): Sets a new audio path.\n    set_api_key(api_key): Sets a new API key.\n    set_cta_text(text): Sets a new call-to-action text.",
+              "methods": [
+                {
+                  "name": "__init__",
+                  "kind": "function",
+                  "signature": "(**kwargs)",
+                  "doc": "Initializes the Config class with optional keyword arguments.\n\nArgs:\n    **kwargs: Arbitrary keyword arguments that can be used to override the default paths and settings.\n\n    - base_dir (str): The base directory for the project.\n    - data_dir (str): The directory where data files are stored.\n    - document_path (str): The path to the document (PDF) file.\n    - video_path (str): The path to the background video file.\n    - output_video_path (str): The path where the output video will be saved.\n    - audio_path (str): The path where the generated audio file will be saved.\n    - api_key (str): The OpenAI API key for content generation.\n    - cta_text (str): The default call-to-action text to be added to videos.\n\nExamples:\n    >>> config = Config(document_path=\"/path/to/document.pdf\", api_key=\"my_openai_api_key\")\n    >>> config = Config()  # Uses all default paths and settings",
+                  "decorators": []
+                },
+                {
+                  "name": "get_document_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_video_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_output_video_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_audio_path",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_openai_api_key",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "get_cta_text",
+                  "kind": "function",
+                  "signature": "()",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_document_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_video_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_output_video_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_audio_path",
+                  "kind": "function",
+                  "signature": "(path)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_openai_api_key",
+                  "kind": "function",
+                  "signature": "(api_key)",
+                  "doc": null,
+                  "decorators": []
+                },
+                {
+                  "name": "set_cta_text",
+                  "kind": "function",
+                  "signature": "(text)",
+                  "doc": null,
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [
+            {
+              "match": "OpenAI"
+            },
+            {
+              "match": "OpenAI"
+            }
+          ],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/utils/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/utils/logger.py",
+          "language": "python",
+          "functions": [
+            {
+              "name": "setup_logger",
+              "kind": "function",
+              "signature": "(name, log_file, level)",
+              "doc": "Get a logger with a specified name, log file, and logging level.\n\nArgs:\n    name (str): The name of the logger. Defaults to \"social_content_engine\".\n    log_file (str): The file to which logs should be written. Defaults to \"social_content_engine.log\".\n    level: The logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to logging.INFO.\n\nReturns:\n    logging.Logger: Configured logger instance.",
+              "decorators": []
+            }
+          ],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/utils/decorators.py",
+          "language": "python",
+          "functions": [
+            {
+              "name": "log_execution",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "handle_errors",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "validate_input",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "cache_result",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            },
+            {
+              "name": "require_api_key",
+              "kind": "function",
+              "signature": "(func)",
+              "doc": null,
+              "decorators": []
+            }
+          ],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/document_processing/__init__.py",
+          "language": "python",
+          "functions": [],
+          "classes": [],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        },
+        {
+          "path": "/Users/sriram.ranganathan99/dumb/tiktokce/src/social_content_engine/document_processing/pdf_processor.py",
+          "language": "python",
+          "functions": [],
+          "classes": [
+            {
+              "name": "PDFProcessor",
+              "bases": [],
+              "doc": null,
+              "methods": [
+                {
+                  "name": "extract_text",
+                  "kind": "function",
+                  "signature": "(pdf_path)",
+                  "doc": "Extract text from a PDF file given its file path.",
+                  "decorators": []
+                }
+              ]
+            }
+          ],
+          "routes": [],
+          "cli": [],
+          "agent_tool_hints": [],
+          "doc": null
+        }
+      ],
+      "agents": [],
+      "tools": [
+        {
+          "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+          "hint": {
+            "match": "agent"
+          }
+        },
+        {
+          "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+          "hint": {
+            "match": "Agent"
+          }
+        },
+        {
+          "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+          "hint": {
+            "match": "tool"
+          }
+        },
+        {
+          "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+          "hint": {
+            "match": "@tool"
+          }
+        }
+      ],
+      "routes": [],
+      "cli_commands": [
+        {
+          "module": "/Users/sriram.ranganathan99/dumb/tiktokce/meta_builder.py",
+          "match": "argparse.ArgumentParser(",
+          "context": "dupe(meta[\"tools\"])\n\n    return meta\n\n\ndef main():\n    ap = argparse.ArgumentParser(description=\"Build meta config for a project\")\n    ap.add_ar"
+        }
+      ],
+      "dependencies": {
+        "python_requirements": {
+          "requirements.txt": []
+        }
+      },
+      "notes": {
+        "generated_by": "meta_builder.py",
+        "purpose": "LLM-friendly config for code understanding and agent wiring",
+        "version": 1
+      }
+    }
+
+    --- End of meta.config.json ---
+
+    meta_builder.py
+
+    --- Content of meta_builder.py ---
+    #!/usr/bin/env python3
+    """
+    Meta Config Builder
+    - Walk a project folder OR parse structure.txt + contents.txt
+    - Extracts:
+      - modules, functions, classes, methods, signatures, docstrings/JSDoc
+      - web routes (Flask/FastAPI/Express), CLI commands (click / argparse)
+      - simple "agent" and "tool" hints (file names, decorators, keywords)
+      - dependency hints from package.json / pyproject.toml / requirements*.txt
+    - Emits meta.config.json (LLM-friendly) and optional meta.config.yaml
+    """
+    
+    from __future__ import annotations
+    import os, re, json, sys, argparse, ast
+    from pathlib import Path
+    from typing import Any, Dict, List, Optional, Tuple
+    
+    # ---------- Utilities
+    
+    PY_EXT = {".py"}
+    JS_EXT = {".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx"}
+    
+    ROUTE_HINTS_PY = [
+        r"@app\.route\((?P<args>.+)\)",
+        r"@(?:api|router)\.(?:get|post|put|patch|delete)\((?P<args>.+)\)",
+        r"@(?:fastapi\.)?APIRouter\(\).(?:get|post|put|patch|delete)\((?P<args>.+)\)",
+    ]
+    ROUTE_HINTS_JS = [
+        r"\bapp\.(get|post|put|patch|delete)\s*\(\s*(?P<path>['\"`][^'\"`]+['\"`])",
+        r"\brouter\.(get|post|put|patch|delete)\s*\(\s*(?P<path>['\"`][^'\"`]+['\"`])",
+        r"\bexpress\.Router\(\)\.(get|post|put|patch|delete)\s*\(\s*(?P<path>['\"`][^'\"`]+['\"`])",
+    ]
+    CLI_HINTS_PY = [
+        r"@click\.command\(",
+        r"\bargparse\.ArgumentParser\(",
+    ]
+    AGENT_TOOL_HINTS = [
+        r"\bagent\b",
+        r"\btool\b",
+        r"@tool\b",
+        r"\bOpenAI\b",
+        r"\bAnthropic\b",
+        r"\bChatOpenAI\b",
+        r"\bfunction_call(ing)?\b",
+        r"\bassist(?:ant)?_tools?\b",
+    ]
+    
+    JS_FUNC_RE = re.compile(
+        r"""
+        (?:
+            /\*\*([\s\S]*?)\*/\s*      # JSDoc block (group 1)
+        )?
+        (?:
+            export\s+(?:default\s+)?function\s+(?P<fn1>[A-Za-z0-9_$]+)\s*\((?P<sig1>[^)]*)\) |
+            export\s+const\s+(?P<fn2>[A-Za-z0-9_$]+)\s*=\s*\((?P<sig2>[^)]*)\)\s*=> |
+            function\s+(?P<fn3>[A-Za-z0-9_$]+)\s*\((?P<sig3>[^)]*)\)
+        )
+        """,
+        re.VERBOSE,
+    )
+    
+    JS_CLASS_RE = re.compile(
+        r"""
+        (?:
+            /\*\*([\s\S]*?)\*/\s*      # JSDoc block (group 1)
+        )?
+        export\s+class\s+(?P<cls1>[A-Za-z0-9_$]+)\s*|
+        class\s+(?P<cls2>[A-Za-z0-9_$]+)\s*
+        """,
+        re.VERBOSE,
+    )
+    
+    
+    def read_text(p: Path) -> str:
+        try:
+            return p.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            return ""
+    
+    
+    def safe_json_load(text: str) -> Optional[dict]:
+        try:
+            return json.loads(text)
+        except Exception:
+            return None
+    
+    
+    def detect_language(path: Path) -> str:
+        if path.suffix in PY_EXT:
+            return "python"
+        if path.suffix in JS_EXT:
+            return "javascript" if path.suffix in {".js", ".mjs", ".cjs", ".jsx"} else "typescript"
+        return "other"
+    
+    
+    # ---------- Parsers: Python
+    
+    def parse_python_file(path: Path) -> Dict[str, Any]:
+        src = read_text(path)
+        out: Dict[str, Any] = {
+            "path": str(path.as_posix()),
+            "language": "python",
+            "functions": [],
+            "classes": [],
+            "routes": [],
+            "cli": [],
+            "agent_tool_hints": [],
+            "doc": extract_module_docstring(src),
+        }
+        try:
+            tree = ast.parse(src)
+        except Exception:
+            # If AST fails, still try regex routes/CLI and hints
+            return fill_py_with_regex(out, src)
+    
+        for node in ast.iter_child_nodes(tree):
+            if isinstance(node, ast.FunctionDef) or isinstance(node, ast.AsyncFunctionDef):
+                out["functions"].append(extract_py_function(node))
+                # decorator-based route discovery
+                route = extract_py_route_from_decorators(node)
+                if route:
+                    out["routes"].append(route)
+            elif isinstance(node, ast.ClassDef):
+                out["classes"].append(extract_py_class(node))
+    
+        # module-level route or CLI hints
+        out["routes"].extend(find_regex_matches(src, ROUTE_HINTS_PY, kind="python"))
+        out["cli"].extend(find_regex_matches(src, CLI_HINTS_PY, kind="cli"))
+        out["agent_tool_hints"].extend(find_regex_matches(src, AGENT_TOOL_HINTS, kind="hint"))
+        return out
+    
+    
+    def extract_module_docstring(src: str) -> Optional[str]:
+        try:
+            return ast.get_docstring(ast.parse(src))
+        except Exception:
+            return None
+    
+    
+    def extract_py_function(fn: ast.AST) -> Dict[str, Any]:
+        assert isinstance(fn, (ast.FunctionDef, ast.AsyncFunctionDef))
+        args = []
+        for a in fn.args.args:
+            if a.arg != "self":
+                args.append(a.arg)
+        # *args / **kwargs
+        if fn.args.vararg:
+            args.append("*" + fn.args.vararg.arg)
+        if fn.args.kwarg:
+            args.append("**" + fn.args.kwarg.arg)
+    
+        decorators = []
+        for d in fn.decorator_list:
+            try:
+                decorators.append(ast.unparse(d))
+            except Exception:
+                decorators.append(type(d).__name__)
+    
+        return {
+            "name": fn.name,
+            "kind": "async_function" if isinstance(fn, ast.AsyncFunctionDef) else "function",
+            "signature": f"({', '.join(args)})",
+            "doc": ast.get_docstring(fn),
+            "decorators": decorators,
+        }
+    
+    
+    def extract_py_class(cls: ast.ClassDef) -> Dict[str, Any]:
+        methods = []
+        for n in cls.body:
+            if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                methods.append(extract_py_function(n))
+        bases = []
+        for b in cls.bases:
+            try:
+                bases.append(ast.unparse(b))
+            except Exception:
+                bases.append(type(b).__name__)
+        return {
+            "name": cls.name,
+            "bases": bases,
+            "doc": ast.get_docstring(cls),
+            "methods": methods,
+        }
+    
+    
+    def extract_py_route_from_decorators(fn: ast.AST) -> Optional[Dict[str, Any]]:
+        if not isinstance(fn, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            return None
+        for d in fn.decorator_list:
+            try:
+                s = ast.unparse(d)
+            except Exception:
+                continue
+            if ".route(" in s or re.search(r"\.(get|post|put|patch|delete)\(", s):
+                return {"handler": getattr(fn, "name", "unknown"), "decorator": s}
+        return None
+    
+    
+    def fill_py_with_regex(out: Dict[str, Any], src: str) -> Dict[str, Any]:
+        out["routes"].extend(find_regex_matches(src, ROUTE_HINTS_PY, kind="python"))
+        out["cli"].extend(find_regex_matches(src, CLI_HINTS_PY, kind="cli"))
+        out["agent_tool_hints"].extend(find_regex_matches(src, AGENT_TOOL_HINTS, kind="hint"))
+        return out
+    
+    
+    # ---------- Parsers: JS/TS
+    
+    def parse_js_like_file(path: Path) -> Dict[str, Any]:
+        src = read_text(path)
+        lang = detect_language(path)
+        out: Dict[str, Any] = {
+            "path": str(path.as_posix()),
+            "language": lang,
+            "functions": [],
+            "classes": [],
+            "routes": [],
+            "cli": [],
+            "agent_tool_hints": [],
+            "doc": None,
+            "exports": [],
+        }
+    
+        # Functions & JSDoc
+        for m in JS_FUNC_RE.finditer(src):
+            jsdoc = (m.group(1) or "").strip() or None
+            name = m.group("fn1") or m.group("fn2") or m.group("fn3")
+            sig = m.group("sig1") or m.group("sig2") or m.group("sig3") or ""
+            out["functions"].append({"name": name, "signature": f"({sig})", "doc": jsdoc})
+            if "export" in src[m.start(): m.end()]:
+                out["exports"].append(name)
+    
+        # Classes
+        for m in JS_CLASS_RE.finditer(src):
+            jsdoc = (m.group(1) or "").strip() or None
+            name = m.group("cls1") or m.group("cls2")
+            out["classes"].append({"name": name, "doc": jsdoc})
+            if "export" in src[m.start(): m.end()]:
+                out["exports"].append(name)
+    
+        # Routes
+        for pat in ROUTE_HINTS_JS:
+            for m in re.finditer(pat, src):
+                p = (m.groupdict().get("path") or "").strip().strip("`'\"")
+                out["routes"].append({"path": p, "framework": "express_like"})
+    
+        # CLI (basic)
+        if re.search(r"\byargs\b|\bcommander\b|\bcaporal\b|\bnpx\b", src):
+            out["cli"].append({"hint": "cli_lib_detected"})
+    
+        # Agent/tool hints
+        out["agent_tool_hints"].extend(find_regex_matches(src, AGENT_TOOL_HINTS, kind="hint"))
+        return out
+    
+    
+    # ---------- Regex helpers
+    
+    def find_regex_matches(src: str, patterns: List[str], kind: str) -> List[Dict[str, Any]]:
+        hits = []
+        for pat in patterns:
+            for m in re.finditer(pat, src, flags=re.IGNORECASE):
+                snippet = src[max(0, m.start()-60): m.end()+60]
+                if kind == "python":
+                    hits.append({"decorator": m.group(0), "context": snippet.strip()})
+                elif kind == "cli":
+                    hits.append({"match": m.group(0), "context": snippet.strip()})
+                else:
+                    hits.append({"match": m.group(0)})
+        return hits
+    
+    
+    # ---------- Dependency discovery
+    
+    def discover_dependencies(root: Path) -> Dict[str, Any]:
+        deps: Dict[str, Any] = {}
+        # Node
+        pkg = root / "package.json"
+        if pkg.exists():
+            data = safe_json_load(read_text(pkg)) or {}
+            deps["node"] = {
+                "name": data.get("name"),
+                "version": data.get("version"),
+                "dependencies": data.get("dependencies", {}),
+                "devDependencies": data.get("devDependencies", {}),
+                "scripts": data.get("scripts", {}),
+            }
+        # Python
+        reqs = {}
+        for f in ["requirements.txt", "requirements-dev.txt", "requirements-test.txt"]:
+            p = root / f
+            if p.exists():
+                reqs[f] = [ln.strip() for ln in read_text(p).splitlines() if ln.strip() and not ln.strip().startswith("#")]
+        if reqs:
+            deps["python_requirements"] = reqs
+        pyproj = root / "pyproject.toml"
+        if pyproj.exists():
+            deps["pyproject_toml_hint"] = True
+        return deps
+    
+    
+    # ---------- Structure/Contents.txt mode
+    
+    def parse_structure_and_contents(structure_txt: Path, contents_txt: Path, project_root: Path) -> List[Dict[str, Any]]:
+        """
+        structure.txt: output of a tree-like listing (best effort)
+        contents.txt: concatenated files with headers like:
+            >>> FILE: relative/path/to/file.py
+            <file content...>
+            >>> END
+        """
+        files: List[Path] = []
+    
+        if structure_txt.exists():
+            for ln in read_text(structure_txt).splitlines():
+                ln = ln.strip()
+                if not ln or ln.startswith("#"): 
+                    continue
+                # naive: collect lines that look like files with extensions
+                if re.search(r"\.[a-zA-Z0-9]{1,5}$", ln) and not ln.endswith(("/", "\\")):
+                    files.append(project_root / ln)
+    
+        file_blobs: Dict[Path, str] = {}
+        if contents_txt.exists():
+            blob = read_text(contents_txt)
+            # split by headers
+            for m in re.finditer(r">>>\s*FILE:\s*(.+)\n", blob):
+                start = m.end()
+                path_rel = m.group(1).strip()
+                end_m = re.search(r"\n>>> END\b", blob[start:], re.MULTILINE)
+                end = start + (end_m.start() if end_m else 0)
+                file_blobs[project_root / path_rel] = blob[start:end]
+    
+        # Parse each discovered file
+        modules = []
+        seen = set()
+        for p in sorted(set(files) | set(file_blobs.keys())):
+            lang = detect_language(p)
+            src = file_blobs.get(p, "")
+            if not src:
+                # If we have a real file on disk, load it
+                if p.exists():
+                    src = read_text(p)
+                else:
+                    # skip unknown
+                    continue
+    
+            # temp-write in memory path? We can parse from string directly for py/js
+            if lang == "python":
+                modules.append(parse_python_source_virtual(p, src))
+            elif lang in {"javascript", "typescript"}:
+                modules.append(parse_js_source_virtual(p, src, lang))
+            else:
+                # keep a minimal record
+                modules.append({"path": str(p.as_posix()), "language": lang, "bytes": len(src)})
+            seen.add(p.as_posix())
+        return modules
+    
+    
+    def parse_python_source_virtual(path: Path, src: str) -> Dict[str, Any]:
+        out = {
+            "path": str(path.as_posix()),
+            "language": "python",
+            "functions": [],
+            "classes": [],
+            "routes": [],
+            "cli": [],
+            "agent_tool_hints": [],
+            "doc": extract_module_docstring(src)
+        }
+        try:
+            tree = ast.parse(src)
+            for node in ast.iter_child_nodes(tree):
+                if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                    out["functions"].append(extract_py_function(node))
+                    route = extract_py_route_from_decorators(node)
+                    if route:
+                        out["routes"].append(route)
+                elif isinstance(node, ast.ClassDef):
+                    out["classes"].append(extract_py_class(node))
+            out["routes"].extend(find_regex_matches(src, ROUTE_HINTS_PY, kind="python"))
+            out["cli"].extend(find_regex_matches(src, CLI_HINTS_PY, kind="cli"))
+            out["agent_tool_hints"].extend(find_regex_matches(src, AGENT_TOOL_HINTS, kind="hint"))
+        except Exception:
+            out = fill_py_with_regex(out, src)
+        return out
+    
+    
+    def parse_js_source_virtual(path: Path, src: str, lang: str) -> Dict[str, Any]:
+        out = {
+            "path": str(path.as_posix()),
+            "language": lang,
+            "functions": [],
+            "classes": [],
+            "routes": [],
+            "cli": [],
+            "agent_tool_hints": [],
+            "doc": None,
+            "exports": [],
+        }
+        for m in JS_FUNC_RE.finditer(src):
+            jsdoc = (m.group(1) or "").strip() or None
+            name = m.group("fn1") or m.group("fn2") or m.group("fn3")
+            sig = m.group("sig1") or m.group("sig2") or m.group("sig3") or ""
+            out["functions"].append({"name": name, "signature": f"({sig})", "doc": jsdoc})
+            if "export" in src[m.start(): m.end()]:
+                out["exports"].append(name)
+        for m in JS_CLASS_RE.finditer(src):
+            jsdoc = (m.group(1) or "").strip() or None
+            name = m.group("cls1") or m.group("cls2")
+            out["classes"].append({"name": name, "doc": jsdoc})
+            if "export" in src[m.start(): m.end()]:
+                out["exports"].append(name)
+        for pat in ROUTE_HINTS_JS:
+            for m in re.finditer(pat, src):
+                p = (m.groupdict().get("path") or "").strip().strip("`'\"")
+                out["routes"].append({"path": p, "framework": "express_like"})
+        if re.search(r"\byargs\b|\bcommander\b|\bcaporal\b|\bnpx\b", src):
+            out["cli"].append({"hint": "cli_lib_detected"})
+        out["agent_tool_hints"].extend(find_regex_matches(src, AGENT_TOOL_HINTS, kind="hint"))
+        return out
+    
+    
+    # ---------- Main build
+    
+    def build_meta(project_root: Path,
+                   structure_txt: Optional[Path],
+                   contents_txt: Optional[Path]) -> Dict[str, Any]:
+        project_root = project_root.resolve()
+        meta: Dict[str, Any] = {
+            "project": project_root.name,
+            "root": str(project_root.as_posix()),
+            "modules": [],
+            "agents": [],
+            "tools": [],
+            "routes": [],
+            "cli_commands": [],
+            "dependencies": discover_dependencies(project_root),
+            "notes": {
+                "generated_by": "meta_builder.py",
+                "purpose": "LLM-friendly config for code understanding and agent wiring",
+                "version": 1
+            }
+        }
+    
+        modules: List[Dict[str, Any]] = []
+    
+        # Mode 2: structure+contents
+        if structure_txt and contents_txt and structure_txt.exists() and contents_txt.exists():
+            modules = parse_structure_and_contents(structure_txt, contents_txt, project_root)
+        else:
+            # Mode 1: walk filesystem
+            for p in project_root.rglob("*"):
+                if p.is_file():
+                    if p.suffix in PY_EXT:
+                        modules.append(parse_python_file(p))
+                    elif p.suffix in JS_EXT:
+                        modules.append(parse_js_like_file(p))
+    
+        # Aggregate top-level routes/cli and agent/tool hints
+        meta["modules"] = modules
+        for m in modules:
+            for r in m.get("routes", []):
+                meta["routes"].append({"module": m["path"], **r})
+            for c in m.get("cli", []):
+                meta["cli_commands"].append({"module": m["path"], **c})
+            for h in m.get("agent_tool_hints", []):
+                # very light heuristic to surface likely agent/tool files
+                if re.search(r"tool|agent", json.dumps(h), flags=re.I):
+                    meta["tools"].append({"module": m["path"], "hint": h})
+    
+        # De-dupe lists
+        def dedupe(seq):
+            seen = set()
+            out = []
+            for x in seq:
+                key = json.dumps(x, sort_keys=True)
+                if key not in seen:
+                    seen.add(key)
+                    out.append(x)
+            return out
+    
+        meta["routes"] = dedupe(meta["routes"])
+        meta["cli_commands"] = dedupe(meta["cli_commands"])
+        meta["tools"] = dedupe(meta["tools"])
+    
+        return meta
+    
+    
+    def main():
+        ap = argparse.ArgumentParser(description="Build meta config for a project")
+        ap.add_argument("--root", default=".", help="Project root directory")
+        ap.add_argument("--structure", default=None, help="Path to structure.txt (optional)")
+        ap.add_argument("--contents", default=None, help="Path to contents.txt (optional)")
+        ap.add_argument("--yaml", action="store_true", help="Also write meta.config.yaml")
+        args = ap.parse_args()
+    
+        root = Path(args.root)
+        structure = Path(args.structure) if args.structure else None
+        contents = Path(args.contents) if args.contents else None
+    
+        meta = build_meta(root, structure, contents)
+        out_json = root / "meta.config.json"
+        out_json.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"Wrote {out_json}")
+    
+        if args.yaml:
+            try:
+                import yaml  # type: ignore
+                out_yaml = root / "meta.config.yaml"
+                out_yaml.write_text(yaml.safe_dump(meta, sort_keys=False, allow_unicode=True), encoding="utf-8")
+                print(f"Wrote {out_yaml}")
+            except Exception:
+                print("PyYAML not installed; skipped YAML output.", file=sys.stderr)
+    
+    
+    if __name__ == "__main__":
+        main()
+
+    --- End of meta_builder.py ---
+
+    requirements.txt
+
+    --- Content of requirements.txt ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of requirements.txt ---
+
+    setup.py
+
+    --- Content of setup.py ---
+    from setuptools import setup, find_packages
+    from setuptools import setup, find_packages
+    
+    setup(
+        name="social-content-engine",
+        version="0.1.0",
+        description="A modular backend system for automating content creation for social media platforms",
+        long_description=open("README.md").read(),
+        long_description_content_type="text/markdown",
+        author="Your Name",
+        author_email="your.email@example.com",
+        url="https://github.com/yourusername/social_content_engine",
+        packages=find_packages(
+            where="src"
+        ),  # This will find all sub-packages, including config
+        package_dir={"": "src"},
+        include_package_data=True,
+        install_requires=[
+            "flask",
+            "gtts",
+            "moviepy",
+            "openai",
+            "PyPDF2",
+        ],
+        classifiers=[
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: MIT License",
+            "Operating System :: OS Independent",
+        ],
+        python_requires=">=3.7",
+    )
+
+    --- End of setup.py ---
+
+    snapshot_project.py
+
+    --- Content of snapshot_project.py ---
+    #!/usr/bin/env python3
+    """
+    snapshot_project.py
+    Create two portable snapshots of a codebase:
+    
+    1) structure.txt  – a tree-like listing (stable, sorted)
+    2) contents.txt   – concatenated file contents with clear FILE/END markers
+    
+    Features
+    - Include/exclude globs (multiple) and extension filters
+    - Skips binaries by default; size limits with per-file override
+    - Secrets redaction (API keys, tokens, .env values) before writing
+    - Deterministic ordering for reproducible snapshots
+    - UTF-8 read with safe fallback; if not decodable => note and skip
+    
+    Usage
+      python snapshot_project.py --root ./tiktokce
+      python snapshot_project.py --root . --out-structure structure.txt --out-contents contents.txt \
+          --include-ext .py,.txt,.md,.json,.yaml,.yml,.toml \
+          --exclude '**/.git/**' '**/dist/**' '**/build/**' '**/__pycache__/**' '**/.DS_Store' '**/data/*.mp4' '**/data/*.mp3' \
+          --max-bytes 200000
+    
+    Tip: After generating the two files, run the meta builder:
+      python meta_builder.py --root ./tiktokce --structure structure.txt --contents contents.txt --yaml
+    """
+    
+    from __future__ import annotations
+    import argparse, fnmatch, hashlib, io, os, re, sys
+    from pathlib import Path
+    from typing import Iterable, List, Tuple
+    
+    DEFAULT_EXCLUDES = [
+        "**/.git/**", "**/.github/**", "**/.idea/**", "**/.vscode/**", "**/__pycache__/**",
+        "**/node_modules/**", "**/dist/**", "**/build/**", "**/*.egg-info/**",
+        "**/.DS_Store", "**/*.pyc", "**/*.pyo", "**/.pytest_cache/**",
+        "**/*.whl", "**/*.tar.gz", "**/*.zip",
+        "**/coverage/**", "**/.mypy_cache/**",
+        # large media by default
+        "**/*.mp4", "**/*.mp3", "**/*.mov", "**/*.wav", "**/*.gif", "**/*.png", "**/*.jpg", "**/*.jpeg",
+        # notebooks can be huge/noisy; include if you want
+        "**/*.ipynb",
+    ]
+    
+    DEFAULT_INCLUDE_EXT = [
+        ".py", ".ts", ".tsx", ".js", ".jsx",
+        ".txt", ".md", ".json", ".yaml", ".yml", ".toml", ".ini",
+        ".cfg", ".conf", ".env.example",
+        ".sh", ".bat", ".ps1", ".dockerfile", ".Dockerfile",
+    ]
+    
+    # Very light secret redaction patterns (best-effort; extend as needed)
+    SECRET_PATTERNS = [
+        # OpenAI keys
+        r"(?i)(OPENAI_API_KEY\s*=\s*)(['\"]?)(sk-[\w\-]{10,})\2",
+        r"(?i)(OPENAI_API_KEY\s*[:=]\s*)(['\"]?)(sk-proj-[\w\-]{10,})\2",
+        # Bearer tokens, generic API tokens
+        r"(?i)(Authorization\s*:\s*Bearer\s+)([A-Za-z0-9\.\-_]{10,})",
+        r"(?i)(api[_\- ]?key\s*[:=]\s*)(['\"]?)([A-Za-z0-9\-_]{16,})\2",
+        # AWS-ish
+        r"(?i)(AWS_ACCESS_KEY_ID\s*=\s*)(['\"]?)(AKIA[0-9A-Z]{12,})\2",
+        r"(?i)(AWS_SECRET_ACCESS_KEY\s*=\s*)(['\"]?)([A-Za-z0-9/+=]{30,})\2",
+    ]
+    
+    REDACTION = r"\1\2***REDACTED***\2"
+    
+    BINARY_SNIFF_BYTES = 2048
+    
+    
+    def is_binary(path: Path) -> bool:
+        try:
+            with path.open("rb") as f:
+                chunk = f.read(BINARY_SNIFF_BYTES)
+            if b"\x00" in chunk:
+                return True
+            # Heuristic: lots of non-text bytes
+            text_like = sum(c in b"\t\r\n\f\b" or 32 <= c <= 126 for c in chunk)
+            return text_like / max(1, len(chunk)) < 0.85
+        except Exception:
+            return False
+    
+    
+    def normalize_globs(globs: Iterable[str]) -> List[str]:
+        return [g.strip() for g in globs if g and g.strip()]
+    
+    
+    def matches_any(path: Path, globs: Iterable[str], root: Path) -> bool:
+        # Use posix form for stable matching
+        s = path.relative_to(root).as_posix()
+        for g in globs:
+            if fnmatch.fnmatch(s, g):
+                return True
+        return False
+    
+    
+    def should_include_file(path: Path, root: Path, include_exts: List[str], excludes: List[str]) -> bool:
+        if matches_any(path, excludes, root):
+            return False
+        if include_exts:
+            return path.suffix.lower() in {e.lower() for e in include_exts}
+        return True
+    
+    
+    def read_text_lossy(p: Path, max_bytes: int) -> Tuple[str, bool]:
+        try:
+            raw = p.read_bytes()
+        except Exception as e:
+            return f"Could not read file {p.name}: {e}", False
+    
+        truncated = False
+        if max_bytes and len(raw) > max_bytes:
+            raw = raw[:max_bytes]
+            truncated = True
+    
+        # try utf-8 first, fallback to latin-1
+        try:
+            txt = raw.decode("utf-8")
+        except UnicodeDecodeError:
+            try:
+                txt = raw.decode("latin-1")
+            except Exception as e:
+                return f"Could not decode file {p.name}: {e}", False
+    
+        return (txt + ("\n\n# [TRUNCATED]\n" if truncated else "")), True
+    
+    
+    def redact_secrets(text: str) -> str:
+        redacted = text
+        for pat in SECRET_PATTERNS:
+            redacted = re.sub(pat, REDACTION, redacted)
+        return redacted
+    
+    
+    def hash_file(path: Path) -> str:
+        h = hashlib.sha256()
+        try:
+            with path.open("rb") as f:
+                for chunk in iter(lambda: f.read(65536), b""):
+                    h.update(chunk)
+            return h.hexdigest()
+        except Exception:
+            return ""
+    
+    
+    def build_structure(root: Path, files: List[Path]) -> str:
+        # Render a simple, stable tree-only list
+        out_lines = [f"{root.name}/"]
+        for p in sorted(files, key=lambda x: x.as_posix()):
+            rel = p.relative_to(root).as_posix()
+            out_lines.append(f"    {rel if rel else '.'}")
+        return "\n".join(out_lines) + "\n"
+    
+    
+    def build_contents(root: Path, files: List[Path], max_bytes: int) -> str:
+        buf = io.StringIO()
+        buf.write(f"{root.name}/\n")
+        for p in sorted(files, key=lambda x: x.as_posix()):
+            rel = p.relative_to(root).as_posix()
+            buf.write(f"    {rel}\n\n")
+            buf.write(f"    --- Content of {p.name} ---\n")
+            if is_binary(p):
+                buf.write(f"    Skipped binary file.\n")
+                sha = hash_file(p)
+                if sha:
+                    buf.write(f"    SHA256: {sha}\n")
+            else:
+                txt, ok = read_text_lossy(p, max_bytes)
+                txt = redact_secrets(txt)
+                # indent content body for readability
+                indented = "\n".join(("    " + line) for line in txt.splitlines())
+                buf.write(indented + ("\n" if not indented.endswith("\n") else ""))
+            buf.write(f"\n    --- End of {p.name} ---\n\n")
+        return buf.getvalue()
+    
+    
+    def main():
+        ap = argparse.ArgumentParser(description="Create structure.txt and contents.txt snapshots for a project.")
+        ap.add_argument("--root", required=True, help="Project root directory")
+        ap.add_argument("--out-structure", default="structure.txt", help="Output path for structure snapshot")
+        ap.add_argument("--out-contents", default="contents.txt", help="Output path for contents snapshot")
+        ap.add_argument("--exclude", nargs="*", default=DEFAULT_EXCLUDES, help="Glob patterns to exclude")
+        ap.add_argument("--include-ext", default=",".join(DEFAULT_INCLUDE_EXT),
+                        help="Comma-separated list of extensions to include (leave empty to include all)")
+        ap.add_argument("--max-bytes", type=int, default=300_000,
+                        help="Per-file max bytes included in contents.txt (0 = unlimited)")
+        args = ap.parse_args()
+    
+        root = Path(args.root).resolve()
+        if not root.exists():
+            print(f"[error] root not found: {root}", file=sys.stderr)
+            sys.exit(1)
+    
+        include_exts = [e.strip() for e in (args.include_ext.split(",") if args.include_ext else []) if e.strip()]
+        excludes = normalize_globs(args.exclude)
+    
+        # collect candidate files
+        files: List[Path] = []
+        for p in root.rglob("*"):
+            if not p.is_file():
+                continue
+            if should_include_file(p, root, include_exts, excludes):
+                files.append(p)
+    
+        # write structure
+        structure = build_structure(root, files)
+        Path(args.out_structure).write_text(structure, encoding="utf-8")
+        print(f"[ok] wrote {args.out_structure} ({len(files)} files listed)")
+    
+        # write contents
+        contents = build_contents(root, files, max_bytes=args.max_bytes)
+        Path(args.out_contents).write_text(contents, encoding="utf-8")
+        print(f"[ok] wrote {args.out_contents}")
+    
+    if __name__ == "__main__":
+        main()
+
+    --- End of snapshot_project.py ---
+
+    src/social_content_engine.egg-info/SOURCES.txt
+
+    --- Content of SOURCES.txt ---
+    MANIFEST.in
+    README.md
+    requirements.txt
+    setup.py
+    src/social_content_engine/__init__.py
+    src/social_content_engine/main.py
+    src/social_content_engine.egg-info/PKG-INFO
+    src/social_content_engine.egg-info/SOURCES.txt
+    src/social_content_engine.egg-info/dependency_links.txt
+    src/social_content_engine.egg-info/requires.txt
+    src/social_content_engine.egg-info/top_level.txt
+    src/social_content_engine/audio_conversion/__init__.py
+    src/social_content_engine/audio_conversion/text_to_speech.py
+    src/social_content_engine/config/__init__.py
+    src/social_content_engine/config/settings.py
+    src/social_content_engine/content_generation/__init__.py
+    src/social_content_engine/content_generation/ai_content_generator.py
+    src/social_content_engine/cta_integration/__init__.py
+    src/social_content_engine/cta_integration/add_cta.py
+    src/social_content_engine/document_processing/__init__.py
+    src/social_content_engine/document_processing/pdf_processor.py
+    src/social_content_engine/utils/__init__.py
+    src/social_content_engine/utils/decorators.py
+    src/social_content_engine/utils/logger.py
+    src/social_content_engine/video_creation/__init__.py
+    src/social_content_engine/video_creation/video_overlay.py
+    src/social_content_engine/video_creation/video_library/__init__.py
+    src/social_content_engine/video_creation/video_library/manage_videos.py
+
+    --- End of SOURCES.txt ---
+
+    src/social_content_engine.egg-info/dependency_links.txt
+
+    --- Content of dependency_links.txt ---
+    
+
+    --- End of dependency_links.txt ---
+
+    src/social_content_engine.egg-info/requires.txt
+
+    --- Content of requires.txt ---
+    flask
+    gtts
+    moviepy
+    openai
+    PyPDF2
+
+    --- End of requires.txt ---
+
+    src/social_content_engine.egg-info/top_level.txt
+
+    --- Content of top_level.txt ---
+    social_content_engine
+
+    --- End of top_level.txt ---
+
+    src/social_content_engine/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/audio_conversion/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/audio_conversion/text_to_speech.py
+
+    --- Content of text_to_speech.py ---
+    from moviepy.audio.fx.all import audio_fadein, audio_fadeout, volumex
+    import moviepy.editor as mp
+    from PIL import Image, ImageDraw, ImageFont
+    import os
+    from gtts import gTTS
+    
+    
+    class TextToSpeechConverter:
+        def __init__(self, text):
+            self.text = text
+    
+        def convert_to_speech(self, output_path="output_audio.mp3"):
+            # Convert text to speech using gTTS
+            tts = gTTS(self.text)
+            tts.save(output_path)
+    
+            # Load the generated audio using moviepy
+            audio_clip = mp.AudioFileClip(output_path)
+    
+            # Enhance the audio with fade in/out and volume adjustments
+            enhanced_audio = self.enhance_audio(audio_clip)
+    
+            # Save the enhanced audio
+            enhanced_output_path = os.path.join(
+                os.path.dirname(output_path), "enhanced_" + os.path.basename(output_path)
+            )
+            enhanced_audio.write_audiofile(enhanced_output_path)
+    
+            return enhanced_output_path
+    
+        def enhance_audio(self, audio_clip):
+            audio_clip = audio_fadein(audio_clip, 2)  # Fade in for 2 seconds
+            audio_clip = audio_fadeout(audio_clip, 2)  # Fade out for 2 seconds
+            audio_clip = volumex(audio_clip, 1.2)  # Increase volume by 20%
+            return audio_clip
+    
+        def generate_text_image(self, text, image_path, font_size=24):
+            # Create an image with text using Pillow
+            font = ImageFont.truetype("arial.ttf", font_size)
+            image = Image.new("RGB", (800, 200), color=(73, 109, 137))
+            draw = ImageDraw.Draw(image)
+            draw.text((10, 90), text, font=font, fill=(255, 255, 255))
+            image.save(image_path)
+    
+    
+    # Example Usage:
+    # converter = TextToSpeechConverter("Hello, world!")
+    # converter.generate_text_image("Hello, world!", "text_image.png")
+
+    --- End of text_to_speech.py ---
+
+    src/social_content_engine/config/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/config/settings.py
+
+    --- Content of settings.py ---
+    import os
+    
+    
+    class Config:
+        """
+        Configuration class for the Social Content Engine.
+    
+        This class provides a flexible way to configure paths, API keys, and other settings
+        for the Social Content Engine. Default values are provided, but users can override them
+        via keyword arguments.
+    
+        Attributes:
+            base_dir (str): The base directory for the project. Defaults to the current working directory.
+            data_dir (str): The directory where data files are stored. Defaults to a 'data' folder within the base directory.
+            document_path (str): The path to the document (PDF) file. Defaults to 'Document.pdf' in the data directory.
+            video_path (str): The path to the background video file. Defaults to 'Video.mp4' in the data directory.
+            output_video_path (str): The path where the output video will be saved. Defaults to 'output_video.mp4' in the data directory.
+            audio_path (str): The path where the generated audio file will be saved. Defaults to 'output_audio.mp3' in the data directory.
+            api_key (str): The OpenAI API key for content generation. Defaults to a placeholder string.
+            cta_text (str): The default call-to-action text to be added to videos. Defaults to "Subscribe Now!".
+    
+        Methods:
+            get_document_path(): Returns the document path.
+            get_video_path(): Returns the video path.
+            get_output_video_path(): Returns the output video path.
+            get_audio_path(): Returns the audio path.
+            get_api_key(): Returns the API key.
+            get_cta_text(): Returns the call-to-action text.
+            set_document_path(path): Sets a new document path.
+            set_video_path(path): Sets a new video path.
+            set_output_video_path(path): Sets a new output video path.
+            set_audio_path(path): Sets a new audio path.
+            set_api_key(api_key): Sets a new API key.
+            set_cta_text(text): Sets a new call-to-action text.
+        """
+    
+        def __init__(self, **kwargs):
+            """
+            Initializes the Config class with optional keyword arguments.
+    
+            Args:
+                **kwargs: Arbitrary keyword arguments that can be used to override the default paths and settings.
+    
+                - base_dir (str): The base directory for the project.
+                - data_dir (str): The directory where data files are stored.
+                - document_path (str): The path to the document (PDF) file.
+                - video_path (str): The path to the background video file.
+                - output_video_path (str): The path where the output video will be saved.
+                - audio_path (str): The path where the generated audio file will be saved.
+                - api_key (str): The OpenAI API key for content generation.
+                - cta_text (str): The default call-to-action text to be added to videos.
+    
+            Examples:
+                >>> config = Config(document_path="/path/to/document.pdf", api_key="***REDACTED***")
+                >>> config = Config()  # Uses all default paths and settings
+            """
+            # Set base directory and data directory
+            self.base_dir = kwargs.get("base_dir", os.getcwd())
+            self.data_dir = kwargs.get("data_dir", os.path.join(self.base_dir, "data"))
+    
+            # Set paths, allowing overrides via kwargs
+            self.document_path = kwargs.get(
+                "document_path", os.path.join(self.data_dir, "Document.pdf")
+            )
+            self.video_path = kwargs.get(
+                "video_path", os.path.join(self.data_dir, "Video.mp4")
+            )
+            self.output_video_path = kwargs.get(
+                "output_video_path", os.path.join(self.data_dir, "output_video.mp4")
+            )
+            self.audio_path = kwargs.get(
+                "audio_path", os.path.join(self.data_dir, "output_audio.mp3")
+            )
+    
+            # Set API key
+            self.api_key = kwargs.get("api_key", "your_openai_api_key_here")
+    
+            # Call-to-action text
+            self.cta_text = kwargs.get("cta_text", "Subscribe Now!")
+    
+        def get_document_path(self):
+            return self.document_path
+    
+        def get_video_path(self):
+            return self.video_path
+    
+        def get_output_video_path(self):
+            return self.output_video_path
+    
+        def get_audio_path(self):
+            return self.audio_path
+    
+        def get_openai_api_key(self):
+            return self.api_key
+    
+        def get_cta_text(self):
+            return self.cta_text
+    
+        # Setters
+        def set_document_path(self, path):
+            self.document_path = path
+    
+        def set_video_path(self, path):
+            self.video_path = path
+    
+        def set_output_video_path(self, path):
+            self.output_video_path = path
+    
+        def set_audio_path(self, path):
+            self.audio_path = path
+    
+        def set_openai_api_key(self, api_key):
+            self.api_key = api_key
+    
+        def set_cta_text(self, text):
+            self.cta_text = text
+
+    --- End of settings.py ---
+
+    src/social_content_engine/content_generation/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/content_generation/ai_content_generator.py
+
+    --- Content of ai_content_generator.py ---
+    import openai
+    from social_content_engine.utils.logger import setup_logger
+    
+    # Set up a logger for the AIContentGenerator
+    logger = setup_logger(__name__)
+    
+    
+    class AIContentGenerator:
+        """
+        A class to generate content using OpenAI's API.
+        """
+    
+        def __init__(self, api_key: str):
+            """
+            Initialize the AIContentGenerator with an API key.
+    
+            Args:
+                api_key (str): The API key to authenticate with OpenAI.
+            """
+            self.api_key = api_key
+            openai.api_key = self.api_key
+            logger.info("Initialized AIContentGenerator with provided API key.")
+    
+        def generate_content(self, prompt: str) -> str:
+            """
+            Generate content based on a prompt using OpenAI's API.
+    
+            Args:
+                prompt (str): The input text prompt.
+    
+            Returns:
+                str: The generated content.
+            """
+            try:
+                logger.info(f"Generating content with prompt: {prompt}")
+                response = openai.chat.completions.create(
+                    model="gpt-4",  # or "gpt-3.5-turbo" or another model as needed
+                    messages=[
+                        {"role": "system", "content": "You are a helpful assistant."},
+                        {"role": "user", "content": prompt},
+                    ],
+                    max_tokens=500,  # Adjust as needed
+                    temperature=0.7,  # Adjust for creativity vs. determinism
+                )
+                content = response.choices[0].message.content  # Corrected access method
+                logger.info("Successfully generated content.")
+                return content
+            except openai.OpenAIError as e:
+                logger.error(f"OpenAI API error: {e}")
+                raise RuntimeError(f"OpenAI API error: {e}")
+            except Exception as e:
+                logger.error(f"Unexpected error during content generation: {e}")
+                raise RuntimeError(f"Unexpected error during content generation: {e}")
+
+    --- End of ai_content_generator.py ---
+
+    src/social_content_engine/cta_integration/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/cta_integration/add_cta.py
+
+    --- Content of add_cta.py ---
+    from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
+    from social_content_engine.utils.logger import setup_logger
+    
+    # Set up a logger for the CTAAdder
+    logger = setup_logger(__name__)
+    
+    
+    class CTAAdder:
+        """
+        A class to add a call-to-action (CTA) at the end of a video.
+        """
+    
+        @staticmethod
+        def add(
+            video_file: str, cta_text: str, output_file: str = "final_video_with_cta.mp4"
+        ) -> str:
+            """
+            Add a call-to-action (CTA) to a video.
+    
+            Args:
+                video_file (str): Path to the video file.
+                cta_text (str): The CTA text to add to the video.
+                output_file (str): The name of the output video file with the CTA. Defaults to 'final_video_with_cta.mp4'.
+    
+            Returns:
+                str: The path to the saved video file with the CTA.
+            """
+            try:
+                logger.info(f"Adding CTA to video: {video_file}")
+    
+                # Load the video file
+                video = VideoFileClip(video_file)
+                video_duration = video.duration
+    
+                # Create a text clip for the CTA
+                cta_clip = TextClip(
+                    cta_text, fontsize=30, color="white", bg_color="black", size=video.size
+                )
+                cta_clip = cta_clip.set_pos("center").set_duration(
+                    5
+                )  # Show CTA for 5 seconds
+    
+                # Position the CTA clip at the end of the video
+                cta_clip = cta_clip.set_start(video_duration - 5)
+    
+                # Create the final composite video with the CTA
+                final_clip = CompositeVideoClip([video, cta_clip])
+    
+                # Write the final video file with the CTA
+                final_clip.write_videofile(output_file, codec="libx264", audio_codec="aac")
+                logger.info(f"Successfully added CTA and saved to {output_file}.")
+                return output_file
+            except Exception as e:
+                logger.error(f"Error adding CTA to video: {e}")
+                raise RuntimeError(f"Error adding CTA to video: {e}")
+    
+    
+    # Example usage:
+    # video_file = "final_video.mp4"
+    # cta_text = "Subscribe to our channel!"
+    # cta_adder = CTAAdder()
+    # final_video_with_cta = cta_adder.add(video_file, cta_text)
+    # print(f"Video with CTA saved to {final_video_with_cta}")
+
+    --- End of add_cta.py ---
+
+    src/social_content_engine/document_processing/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/document_processing/pdf_processor.py
+
+    --- Content of pdf_processor.py ---
+    import logging
+    from PyPDF2 import PdfReader
+    
+    logger = logging.getLogger(__name__)
+    
+    
+    class PDFProcessor:
+        def extract_text(self, pdf_path: str) -> str:
+            """
+            Extract text from a PDF file given its file path.
+            """
+            try:
+                logger.info(f"Starting text extraction from PDF: {pdf_path}")
+    
+                # Open the PDF file
+                with open(pdf_path, "rb") as pdf_file:
+                    reader = PdfReader(pdf_file)
+                    text = ""
+                    for page_num in range(len(reader.pages)):
+                        page = reader.pages[page_num]
+                        text += page.extract_text()
+    
+                logger.info(f"Text extraction completed from PDF: {pdf_path}")
+                return text
+    
+            except Exception as e:
+                logger.error(f"Error extracting text from PDF: {e}")
+                raise RuntimeError(f"Error extracting text from PDF: {e}")
+
+    --- End of pdf_processor.py ---
+
+    src/social_content_engine/main.py
+
+    --- Content of main.py ---
+    from typing import Optional, Union
+    import os
+    from social_content_engine.config.settings import Config
+    from social_content_engine.document_processing.pdf_processor import PDFProcessor
+    from social_content_engine.content_generation.ai_content_generator import (
+        AIContentGenerator,
+    )
+    from social_content_engine.audio_conversion.text_to_speech import TextToSpeechConverter
+    from social_content_engine.video_creation.video_overlay import VideoOverlay
+    from social_content_engine.cta_integration.add_cta import CTAAdder
+    import logging
+    
+    
+    class SocialContentEngine:
+        def __init__(
+            self,
+            api_key: str,
+            config: Optional[Config] = None,
+            video_path: Optional[str] = None,  # Updated this line
+            output_video_file: Optional[str] = None,
+            audio_file: Optional[str] = None,
+            cta_text: Optional[str] = None,
+        ):
+            self.config = config or Config()
+            self.api_key = api_key
+            self.background_video_file = video_path or self.config.get_video_path()
+            self.output_video_file = (
+                output_video_file or self.config.get_output_video_path()
+            )
+            self.audio_file = audio_file or self.config.get_audio_path()
+            self.cta_text = cta_text or self.config.get_cta_text()
+    
+            self.pdf_processor = PDFProcessor()
+            self.content_generator = AIContentGenerator(api_key=self.api_key)
+            self.tts_converter = None  # Initialize as None, will be set later
+            self.video_overlay = VideoOverlay(self.background_video_file, self.audio_file)
+            self.cta_adder = CTAAdder()
+    
+        def process_document(self, pdf_path: str):
+            """
+            Process the provided PDF document to generate video content.
+            """
+            # Step 1: Extract text from the PDF
+            extracted_text = self.pdf_processor.extract_text(pdf_path)
+            if not extracted_text:
+                raise ValueError("No text extracted from the document.")
+    
+            # Step 2: Generate content for the video
+            generated_content = self.content_generator.generate_content(extracted_text)
+    
+            # Step 3: Convert the generated content to speech
+            self.tts_converter = TextToSpeechConverter(
+                generated_content
+            )  # Pass the text here
+            enhanced_audio_path = self.tts_converter.convert_to_speech()
+    
+            self.video_overlay.update_audio_and_subtitles(
+                enhanced_audio_path, subtitle_segments
+            )
+            self.video_overlay.create_final_video(self.output_video_file)
+    
+            # Step 5: Add CTA to the video
+            final_video_path_with_cta = self.cta_adder.add_cta(
+                self.output_video_file, self.cta_text
+            )
+    
+            logging.info(f"Final video with CTA saved at {final_video_path_with_cta}")
+            return final_video_path_with_cta
+    
+        def generate_subtitle_segments(self, text: str):
+            """
+            Generate subtitle segments based on the provided text.
+            This is a simple segmentation approach; in practice, you may want to use NLP techniques.
+            """
+            lines = text.split("\n")
+            subtitle_segments = []
+            start_time = 0
+            for line in lines:
+                duration = (
+                    len(line.split()) // 2
+                )  # Approximate duration based on word count
+                subtitle_segments.append((start_time, start_time + duration, line))
+                start_time += duration
+            return subtitle_segments
+    
+    
+    # if __name__ == "__main__":
+    #     # Example usage
+    #     api_key = "***REDACTED***"
+    #     pdf_path = "data/Default_Document.pdf"
+    #     video_path = "data/Default_Video.mp4"
+    #     output_video_path = "data/final_video_with_subtitles.mp4"
+    #     cta_text = "Subscribe to our channel!"
+    
+    #     engine = SocialContentEngine(
+    #         api_key=api_key,
+    #         video_path=video_path,  # Use the correct argument name
+    #         output_video_file=output_video_path,
+    #     )
+    #     engine.process_document(pdf_path)
+
+    --- End of main.py ---
+
+    src/social_content_engine/utils/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/utils/decorators.py
+
+    --- Content of decorators.py ---
+    import functools
+    import logging
+    import time
+    from functools import lru_cache
+    
+    
+    # Logging decorator
+    def log_execution(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            logging.info(f"Executing {func.__name__} with args: {args}, kwargs: {kwargs}")
+            start_time = time.time()
+            result = func(*args, **kwargs)
+            duration = time.time() - start_time
+            logging.info(f"Finished {func.__name__} in {duration:.4f} seconds")
+            return result
+    
+        return wrapper
+    
+    
+    # Error handling decorator
+    def handle_errors(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                logging.error(f"Error occurred in {func.__name__}: {str(e)}")
+                raise  # Optionally re-raise or handle the error differently
+    
+        return wrapper
+    
+    
+    # Input validation decorator
+    def validate_input(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            for arg in args:
+                if isinstance(arg, str) and not arg.strip():
+                    raise ValueError(f"Invalid input provided to {func.__name__}")
+            return func(*args, **kwargs)
+    
+        return wrapper
+    
+    
+    # Caching decorator
+    def cache_result(func):
+        @functools.wraps(func)
+        @lru_cache(maxsize=128)  # Adjust maxsize based on expected use
+        def wrapper(*args, **kwargs):
+            return func(*args, **kwargs)
+    
+        return wrapper
+    
+    
+    # API key requirement decorator
+    def require_api_key(func):
+        @functools.wraps(func)
+        def wrapper(self, *args, **kwargs):
+            if not self.api_key:
+                raise ValueError("API key is required to execute this function")
+            return func(self, *args, **kwargs)
+    
+        return wrapper
+
+    --- End of decorators.py ---
+
+    src/social_content_engine/utils/logger.py
+
+    --- Content of logger.py ---
+    import logging
+    
+    
+    def setup_logger(
+        name: str = "social_content_engine",
+        log_file: str = "social_content_engine.log",
+        level=logging.INFO,
+    ):
+        """
+        Get a logger with a specified name, log file, and logging level.
+    
+        Args:
+            name (str): The name of the logger. Defaults to "social_content_engine".
+            log_file (str): The file to which logs should be written. Defaults to "social_content_engine.log".
+            level: The logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to logging.INFO.
+    
+        Returns:
+            logging.Logger: Configured logger instance.
+        """
+        logger = logging.getLogger(name)
+    
+        # Set the logging level
+        logger.setLevel(level)
+    
+        # Create handlers if they are not already added
+        if not logger.hasHandlers():
+            c_handler = logging.StreamHandler()
+            f_handler = logging.FileHandler(log_file)
+            c_handler.setLevel(logging.WARNING)
+            f_handler.setLevel(level)
+    
+            # Create formatters and add it to handlers
+            c_format = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
+            f_format = logging.Formatter(
+                "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+            )
+            c_handler.setFormatter(c_format)
+            f_handler.setFormatter(f_format)
+    
+            # Add handlers to the logger
+            logger.addHandler(c_handler)
+            logger.addHandler(f_handler)
+    
+        return logger
+    
+    
+    # Create a global logger instance
+    logger = setup_logger()
+
+    --- End of logger.py ---
+
+    src/social_content_engine/video_creation/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/video_creation/video_library/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    src/social_content_engine/video_creation/video_library/manage_videos.py
+
+    --- Content of manage_videos.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of manage_videos.py ---
+
+    src/social_content_engine/video_creation/video_overlay.py
+
+    --- Content of video_overlay.py ---
+    import moviepy.editor as mp
+    from PIL import Image, ImageDraw, ImageFont
+    
+    
+    import moviepy.editor as mp
+    
+    
+    class VideoOverlay:
+        def __init__(self, video_path, audio_path, subtitles=[]):
+            self.video_path = video_path
+            self.audio_path = audio_path
+            self.subtitles = subtitles
+    
+        def update_audio_and_subtitles(self, audio_path, subtitles):
+            """
+            Update the audio and subtitles for the video.
+            """
+            self.audio_path = audio_path
+            self.subtitles = subtitles
+    
+        def create_final_video(self, output_path):
+            video_clip = mp.VideoFileClip(self.video_path)
+            audio_clip = mp.AudioFileClip(self.audio_path)
+    
+            # Generate and add dynamic subtitles using Pillow
+            subtitle_clips = self.generate_dynamic_subtitles()
+            final_video = mp.CompositeVideoClip([video_clip, *subtitle_clips]).set_audio(
+                audio_clip
+            )
+    
+            final_video.write_videofile(output_path, codec="libx264", audio_codec="aac")
+    
+        def generate_dynamic_subtitles(self):
+            subtitle_clips = []
+            for start_time, end_time, text in self.subtitles:
+                image_path = f"subtitle_{start_time}.png"
+                self.create_text_image(text, image_path)
+                subtitle_clip = (
+                    mp.ImageClip(image_path)
+                    .set_duration(end_time - start_time)
+                    .set_start(start_time)
+                )
+                subtitle_clips.append(subtitle_clip)
+            return subtitle_clips
+    
+        def create_text_image(self, text, image_path, font_size=24):
+            font = ImageFont.truetype("arial.ttf", font_size)
+            image = Image.new("RGB", (800, 200), color=(73, 109, 137))
+            draw = ImageDraw.Draw(image)
+            draw.text((10, 90), text, font=font, fill=(255, 255, 255))
+            image.save(image_path)
+
+    --- End of video_overlay.py ---
+
+    test.py
+
+    --- Content of test.py ---
+    from social_content_engine.main import SocialContentEngine
+    import os
+    from dotenv import load_dotenv
+    
+    load_dotenv()
+    
+    base_path = os.path.join(os.path.dirname(__file__), "data")
+    test_pdf_path = os.path.join(base_path, "Default_Document.pdf")
+    background_video_path = os.path.join(base_path, "Default_Video.mp4")
+    output_video_path = os.path.join(base_path, "final_video_with_cta.mp4")
+    
+    engine = SocialContentEngine(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        video_path=background_video_path,
+        output_video_file=output_video_path,
+    )
+    
+    
+    def run_tests():
+        """
+        Run all tests sequentially to validate the Social Content Engine's functionality.
+        """
+        extracted_text = engine.process_document(test_pdf_path)
+        print(f"Extracted and Processed Text: {extracted_text}")
+        assert len(extracted_text) > 0, "Failed to process document and generate text"
+        final_video = engine.process_document(test_pdf_path)
+        print(f"Final Video: {final_video}")
+        assert final_video.endswith(
+            ".mp4"
+        ), "Failed to create final video with subtitles and CTA"
+    
+    
+    if __name__ == "__main__":
+        run_tests()
+
+    --- End of test.py ---
+
+    tests/__init__.py
+
+    --- Content of __init__.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of __init__.py ---
+
+    tests/test_api.py
+
+    --- Content of test_api.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of test_api.py ---
+
+    tests/test_audio_conversion.py
+
+    --- Content of test_audio_conversion.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of test_audio_conversion.py ---
+
+    tests/test_content_generation.py
+
+    --- Content of test_content_generation.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of test_content_generation.py ---
+
+    tests/test_document_processing.py
+
+    --- Content of test_document_processing.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of test_document_processing.py ---
+
+    tests/test_video_creation.py
+
+    --- Content of test_video_creation.py ---
+    Skipped binary file.
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+    --- End of test_video_creation.py ---
+

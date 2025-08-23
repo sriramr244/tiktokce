@@ -1,0 +1,14 @@
+run snapshot_project.py
+
+python snapshot_project.py \
+  --root . \
+  --exclude '**/data/*.mp4' '**/data/*.mp3' '**/.DS_Store' '**/dist/**' '**/build/**' \
+  --include-ext .py,.md,.txt,.json,.yaml,.yml,.toml \
+  --max-bytes 200000
+
+run meta_builder.py
+python meta_builder.py --root . --structure structure.txt --contents contents.txt --yaml
+
+python setup.py clean --all
+python setup.py sdist bdist_wheel
+pip install .

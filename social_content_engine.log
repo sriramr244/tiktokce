@@ -998,3 +998,581 @@ precision, and adaptability make them indispensable in the modern world. The fut
 world where robots and humans work together, each complementing the other's strengths, to
 achieve remarkable feats that neither could accomplish alone.
 2024-09-18 06:43:04,805 - social_content_engine.content_generation.ai_content_generator - INFO - Successfully generated content.
+2025-08-10 10:01:55,571 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:01:55,572 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:01:55,579 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:01:55,579 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:02:00,179 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:18:14,659 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:18:14,660 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:18:14,668 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:18:14,668 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:18:19,199 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:21:40,295 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:21:40,295 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:21:40,302 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:21:40,302 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:21:44,563 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:34:51,205 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:34:51,206 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:34:51,212 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:34:51,213 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:34:54,653 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:36:09,033 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:36:09,033 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:36:09,039 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:36:09,039 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:36:12,589 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:36:28,401 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:36:28,401 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:36:28,406 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:36:28,406 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:36:31,952 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:40:27,204 - social_content_engine.content_generation.ai_content_generator - INFO - Initialized AIContentGenerator with provided API key.
+2025-08-10 10:40:27,204 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:40:27,211 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:40:27,211 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content with prompt: The Superiority of Robots Over Humans
+The Superiority of Robots Over Humans
+In the rapidly advancing world of technology, the debate over whether robots are superior to
+humans has gained significant traction. As artificial intelligence (AI) and robotics continue to evolve,
+the argument for the superiority of robots becomes increasingly compelling. From efficiency and
+precision to endurance and adaptability, robots offer several advantages over their human
+counterparts. Here's a closer look at why robots are poised to surpass human abilities in various
+domains.
+1. Unmatched Efficiency and Productivity
+Robots operate with a level of efficiency that humans can only dream of. Unaffected by fatigue or
+distraction, robots can work around the clock without breaks, holidays, or sleep. Their ability to
+perform repetitive tasks with consistent precision and speed makes them ideal for industrial
+production, healthcare, and service industries.
+2. Precision and Accuracy
+One of the key areas where robots outperform humans is precision. Whether it's assembling
+microscopic components in electronics or performing complex surgeries, robots can execute tasks
+with a level of accuracy that far surpasses human capabilities. This precision reduces errors,
+improves quality, and minimizes waste.
+3. Superior Endurance
+Unlike humans, robots do not suffer from physical or mental fatigue. They can operate in extreme
+conditions, such as high temperatures, toxic environments, or outer space, where human survival
+would be impossible. This endurance allows robots to take on tasks that are hazardous orThe Superiority of Robots Over Humans
+monotonous for humans.
+4. Adaptability and Learning
+With the integration of AI, robots are becoming increasingly adaptable. Machine learning algorithms
+enable robots to learn from their experiences, improve their performance over time, and adapt to
+new tasks without human intervention. This ability to evolve makes robots a valuable asset in
+dynamic environments.
+5. Cost-Effectiveness
+While the initial investment in robotics can be high, the long-term benefits far outweigh the costs.
+Robots reduce the need for human labor, minimize errors, and increase productivity, leading to
+significant savings for businesses. Over time, the cost of maintaining robots is lower than paying
+human workers, making them a more economical option.
+6. The Future of Human-Robot Collaboration
+The superiority of robots doesn't necessarily mean the obsolescence of humans. Instead, the future
+likely lies in human-robot collaboration. Robots can take over tasks that are dangerous, tedious, or
+beyond human capability, allowing humans to focus on creative, strategic, and interpersonal roles.
+This synergy between humans and robots could lead to unprecedented advancements in various
+fields.
+Conclusion
+As technology continues to advance, the superiority of robots over humans in certain domains
+becomes increasingly evident. While robots may not replace humans entirely, their efficiency,The Superiority of Robots Over Humans
+precision, and adaptability make them indispensable in the modern world. The future promises a
+world where robots and humans work together, each complementing the other's strengths, to
+achieve remarkable feats that neither could accomplish alone.
+2025-08-10 10:40:30,589 - social_content_engine.content_generation.ai_content_generator - ERROR - OpenAI API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-08-10 10:44:45,665 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-10 10:44:45,665 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-10 10:44:45,665 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-10 10:44:45,665 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:44:45,672 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:44:45,672 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 10:44:45,672 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 10:44:48,696 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 10:44:48,697 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 10:44:52,667 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 10:53:29,746 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-10 10:53:29,747 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-10 10:53:29,747 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-10 10:53:29,747 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:53:29,753 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:53:29,753 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 10:53:29,753 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 10:53:33,224 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 10:53:33,224 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 10:53:39,279 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 10:56:01,388 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-10 10:56:01,389 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-10 10:56:01,389 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-10 10:56:01,389 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:56:01,395 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:56:01,395 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 10:56:01,395 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 10:56:04,767 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 10:56:04,767 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 10:56:09,369 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 10:57:48,895 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-10 10:57:48,895 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-10 10:57:48,895 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-10 10:57:48,895 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 10:57:48,900 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 10:57:48,900 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 10:57:48,900 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 10:57:52,271 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 10:57:52,271 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 10:57:55,971 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 11:03:29,797 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-10 11:03:29,798 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-10 11:03:29,798 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-10 11:03:29,798 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 11:03:29,805 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 11:03:29,805 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 11:03:29,805 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 11:03:33,613 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 11:03:33,613 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 11:03:37,557 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 11:17:15,626 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-10 11:17:15,626 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-10 11:17:15,626 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-10 11:17:15,627 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 11:17:15,633 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 11:17:15,633 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 11:17:15,633 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 11:17:19,431 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 11:17:19,432 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 11:17:23,580 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 11:17:56,204 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-10 11:18:05,725 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-10 11:18:05,725 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-10 11:18:05,731 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-10 11:18:05,731 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-10 11:18:05,731 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-10 11:18:08,823 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-10 11:18:08,823 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-10 11:18:12,512 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-10 11:18:39,421 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-10 11:18:48,437 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:34:11,068 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 01:34:11,069 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 01:34:11,069 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 01:34:11,069 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:34:11,078 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:34:11,078 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:34:11,078 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:34:16,337 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:34:16,337 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:34:20,211 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:34:57,307 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:35:06,890 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:35:06,891 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:35:06,899 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:35:06,899 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:35:06,899 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:35:11,016 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:35:11,017 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:35:14,982 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:35:47,091 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:35:56,943 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:44:23,182 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 01:44:23,182 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 01:44:23,182 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 01:44:23,182 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:44:23,189 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:44:23,189 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:44:23,189 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:44:27,486 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:44:27,486 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:44:31,340 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:45:05,921 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:45:14,703 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:45:14,703 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:45:14,709 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:45:14,709 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:45:14,709 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:45:17,976 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:45:17,976 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:45:21,556 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:45:49,501 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:45:58,503 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:48:28,358 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 01:48:28,358 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 01:48:28,358 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 01:48:28,358 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:48:28,364 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:48:28,364 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:48:28,364 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:48:32,006 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:48:32,007 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:48:35,464 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:49:03,387 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:49:12,726 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:49:12,727 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:49:12,733 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:49:12,733 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:49:12,733 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:49:16,139 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:49:16,139 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:49:19,950 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:49:49,892 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:49:59,282 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:51:30,019 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 01:51:30,020 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 01:51:30,020 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 01:51:30,020 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:51:30,025 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:51:30,025 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:51:30,025 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:51:33,564 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:51:33,565 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:51:37,146 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:52:05,383 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:52:14,989 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 01:52:14,990 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 01:52:14,996 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 01:52:14,996 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 01:52:14,996 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 01:52:18,324 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 01:52:18,324 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 01:52:21,884 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 01:52:50,993 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 01:53:01,373 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 02:03:49,326 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:03:49,327 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:03:49,327 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:03:49,327 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 02:03:49,333 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 02:03:49,333 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 02:03:49,333 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 02:03:53,818 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 02:03:53,819 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 02:03:57,769 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 02:04:39,031 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta.mp4
+2025-08-23 02:04:51,932 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_with_cta.mp4.
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:09:52,395 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:09:52,396 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:09:52,396 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 02:09:52,401 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 02:09:52,401 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 02:09:52,401 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 02:09:56,344 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 02:09:56,344 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 02:10:00,019 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 02:21:25,654 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:21:25,655 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:21:25,655 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 02:21:25,661 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 02:21:25,661 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 02:21:25,661 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 02:21:29,545 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 02:21:29,546 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 02:21:34,151 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 02:22:23,660 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta_asr.mp4
+2025-08-23 02:22:37,318 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_asr_with_cta.mp4.
+2025-08-23 02:24:36,137 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:24:36,137 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:24:36,137 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:24:36,137 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 02:24:36,143 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 02:24:36,143 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 02:24:36,144 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 02:24:41,471 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 02:24:41,471 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 02:24:45,931 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 02:25:23,862 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta_wordcount.mp4
+2025-08-23 02:25:37,513 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_wordcount_with_cta.mp4.
+2025-08-23 02:25:37,513 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:25:37,513 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:25:37,513 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:25:37,514 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 02:25:37,520 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 02:25:37,520 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 02:25:37,520 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 02:25:40,913 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 02:25:40,913 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 02:25:44,920 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 02:28:37,638 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: OpenAI configured.
+2025-08-23 02:28:37,638 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator: Gemini key present.
+2025-08-23 02:28:37,638 - social_content_engine.content_generation.ai_content_generator - INFO - AIContentGenerator provider mode: auto
+2025-08-23 02:28:37,638 - social_content_engine.document_processing.pdf_processor - INFO - Starting text extraction from PDF: data/Default_Document.pdf
+2025-08-23 02:28:37,644 - social_content_engine.document_processing.pdf_processor - INFO - Text extraction completed from PDF: data/Default_Document.pdf
+2025-08-23 02:28:37,644 - social_content_engine.content_generation.ai_content_generator - INFO - Generating content (provider=auto, prompt_len=3290).
+2025-08-23 02:28:37,644 - social_content_engine.content_generation.ai_content_generator - INFO - Using OpenAI model=gpt-4o-mini
+2025-08-23 02:28:41,161 - social_content_engine.content_generation.ai_content_generator - WARNING - OpenAI quota hit (429 insufficient_quota). Falling back to Gemini.
+2025-08-23 02:28:41,161 - social_content_engine.content_generation.ai_content_generator - INFO - Using Gemini model=gemini-1.5-flash via REST
+2025-08-23 02:28:45,482 - social_content_engine.content_generation.ai_content_generator - INFO - Gemini generation successful.
+2025-08-23 02:30:29,187 - social_content_engine.cta_integration.add_cta - INFO - Adding CTA to video: data/final_video_with_cta_asr.mp4
+2025-08-23 02:30:44,930 - social_content_engine.cta_integration.add_cta - INFO - Successfully added CTA and saved to data/final_video_with_cta_asr_with_cta.mp4.
